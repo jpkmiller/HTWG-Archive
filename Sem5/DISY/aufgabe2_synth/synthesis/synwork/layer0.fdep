@@ -1,0 +1,52 @@
+#defaultlanguage:vhdl
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\ds-02\\Documents\\DISY\\aufgabe2_synth\\synthesis\\synwork\\aufgabe2_comp.srs|-top|work.aufgabe2|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\bin64\\c_vhdl.exe":1617265533
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\location.map":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\std.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd\\snps_haps_pkg.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\std1164.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\std_textio.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\numeric.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd\\umr_capim.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\arith.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\unsigned.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd\\hyperents.vhd":1617265541
+#CUR:"C:\\Users\\ds-02\\Documents\\DISY\\aufgabe2\\std_counter.vhd":1643102169
+#CUR:"C:\\Users\\ds-02\\Documents\\DISY\\aufgabe2\\sync_buffer.vhd":1642506649
+#CUR:"C:\\Users\\ds-02\\Documents\\DISY\\aufgabe2\\hex4x7seg.vhd":1642497806
+#CUR:"C:\\Users\\ds-02\\Documents\\DISY\\aufgabe2\\sync_module.vhd":1642506829
+#CUR:"C:\\Users\\ds-02\\Documents\\DISY\\aufgabe2\\aufgabe2.vhd":1638954302
+0 "C:\Users\ds-02\Documents\DISY\aufgabe2\std_counter.vhd" vhdl
+1 "C:\Users\ds-02\Documents\DISY\aufgabe2\sync_buffer.vhd" vhdl
+2 "C:\Users\ds-02\Documents\DISY\aufgabe2\sync_module.vhd" vhdl
+3 "C:\Users\ds-02\Documents\DISY\aufgabe2\hex4x7seg.vhd" vhdl
+4 "C:\Users\ds-02\Documents\DISY\aufgabe2\aufgabe2.vhd" vhdl
+
+# Dependency Lists (Uses list)
+0 -1
+1 -1
+2 1 
+3 -1
+4 2 0 3 
+
+# Dependency Lists (Users Of)
+0 4 
+1 2 
+2 4 
+3 4 
+4 -1
+
+# Design Unit to File Association
+arch work std_counter verhalten 0
+module work std_counter 0
+arch work sync_buffer verhalten 1
+module work sync_buffer 1
+arch work sync_module structure 2
+module work sync_module 2
+arch work hex4x7seg struktur 3
+module work hex4x7seg 3
+arch work aufgabe2 structure 4
+module work aufgabe2 4
+
+
+# Configuration files used

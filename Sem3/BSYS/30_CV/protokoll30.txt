@@ -1,0 +1,84 @@
+No. 2
+
+./main-two-cvs-while -p 1 -c 1 -m 1 -v
+ NF        P0 C0
+  0 [*--- ]    c0
+  0 [*--- ] p0
+  0 [*--- ]    c1
+  0 [*--- ]    c2
+  0 [*--- ] p1
+  1 [*  0 ] p4
+  1 [*  0 ] p5
+  1 [*  0 ] p6
+  1 [*  0 ]    c3
+  0 [*--- ]    c4
+  0 [*--- ]    c5
+  0 [*--- ]    c6
+  1 [*EOS ] [main: added end-of-stream marker]
+  1 [*EOS ]    c0
+  1 [*EOS ]    c1
+  0 [*--- ]    c4
+  0 [*--- ]    c5
+  0 [*--- ]    c6
+
+Consumer consumption:
+  C0 -> 1
+
+The behaviour doesn't change.
+num_full (on the left side as NF) will switch between 0 and 1 -> when a number is produced and buffered the producer signals via
+condition signal that the buffer has been written to and in this case the scheduler always decides to run directly the consumer. This leads to NF = 0
+
+The buffer is almost completely full and the f and u pointer are only one buffer away from each other. Due to modulo the pointer f and u rotate through the buffer.
+When the buffer is written full the producer sleeps because it cannot write
+
+----------------------------------------------------------------------------------------------------------
+
+No. 3
+
+I have no clue...
+
+----------------------------------------------------------------------------------------------------------
+
+No. 4
+
+There are in worst case 11 c3 -> at the very beginning and at the end of the whole process
+
+----------------------------------------------------------------------------------------------------------
+
+No. 5
+
+Shouldn't make a difference
+
+----------------------------------------------------------------------------------------------------------
+
+No. 6
+
+After the lock is released the thread sleeps about a second BUT in the meanwhile another thread can do other work -> therefore it should be half the number of c6s
+
+----------------------------------------------------------------------------------------------------------
+
+No. 7
+
+No difference
+
+----------------------------------------------------------------------------------------------------------
+
+No. 8
+
+No, it's not possible -> the problem is mainly caused when two consumers are used => when one consumer consumes the buffer
+and wakes up another sleeping consumer
+
+----------------------------------------------------------------------------------------------------------
+
+No. 9
+
+Couldn't find a solution
+
+----------------------------------------------------------------------------------------------------------
+
+No. 10
+
+----------------------------------------------------------------------------------------------------------
+
+No. 11
+

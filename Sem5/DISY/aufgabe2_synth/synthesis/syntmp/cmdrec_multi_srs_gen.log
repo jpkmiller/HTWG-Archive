@@ -1,0 +1,7 @@
+C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  work.aufgabe2  -multisrs  C:\Users\ds-02\Documents\DISY\aufgabe2_synth\synthesis\synwork\aufgabe2_comp.srs  -osyn  C:\Users\ds-02\Documents\DISY\aufgabe2_synth\synthesis\synwork\aufgabe2_mult.srs  -log  C:\Users\ds-02\Documents\DISY\aufgabe2_synth\synthesis\synlog\aufgabe2_multi_srs_gen.srr 
+relcom:..\..\..\..\..\..\..\Microsemi\Libero_SoC_v2021.1\SynplifyPro\bin64\syn_nfilter.exe -link -top work.aufgabe2 -multisrs ..\synwork\aufgabe2_comp.srs -osyn ..\synwork\aufgabe2_mult.srs -log ..\synlog\aufgabe2_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:..\synwork\aufgabe2_comp.srs|io:i|time:1643102187|size:10171|exec:0|csum:5CC753F9C4590537B267E80E2211FF5F
+file:..\synwork\aufgabe2_mult.srs|io:o|time:1643102188|size:3348|exec:0|csum:
+file:..\synlog\aufgabe2_multi_srs_gen.srr|io:o|time:1643102188|size:1162|exec:0|csum:
+file:..\..\..\..\..\..\..\Microsemi\Libero_SoC_v2021.1\SynplifyPro\bin64\syn_nfilter.exe|io:i|time:1617265533|size:8887296|exec:1|csum:9561E25355F6B6FC4473E96717C42771

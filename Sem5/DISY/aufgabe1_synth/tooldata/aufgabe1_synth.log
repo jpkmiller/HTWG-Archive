@@ -1,0 +1,16 @@
+Project Name: aufgabe1_synth
+Location: C:\Users\ds-02\Documents\DISY\aufgabe1_synth
+Description: 
+Preferred HDL Type: VHDL
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : M2S005-TQ144
+Family         : SmartFusion2
+Die            : M2S005
+Package        : 144 TQ
+Speed          : STD
+Core Voltage   : 1.2
+Range          : COM

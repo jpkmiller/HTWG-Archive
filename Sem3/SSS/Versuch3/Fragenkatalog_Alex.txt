@@ -1,0 +1,82 @@
+1. Wie verändert sich das Spektrums einer Rechteckschwingung mit fester Impulsdauer, bei
+der die Periode immer weiter erhöht wird?
+	Das Experiment zeigt: wird die Periodendauer T (bei
+gleichbleibender Impulsdauer) größer, so wird der Abstand der
+Linien 1/T notwendigerweise immer enger.
+
+2. Was ist ein fastperiodisches Signal?
+	Signal das in einem Beriech peridoisch ist
+
+3. Sie beobachten ein Spektrum aus mehreren Linien bei 100 Hz, 200 Hz, 270 Hz, 400 Hz und
+800 Hz. Um was für einen Signaltyp handelt es sich?
+	quasiperiodisches Signal
+
+4. Welche Signale lassen sich als Fourierreihe darstellen?
+	Alle physikalish erzeugbare Signale
+
+5. Wie sieht das Spektrum eines einzelnen Rechteckimpulses aus?
+	stetige Funktion
+
+6. Wie sieht die Fouriertransformierte des mit 2 skalierten Einheitsimpulses aus?
+	konstant mit allen frequenzen (da zeitauslösung maximal)
+
+7. Wie kann man am Besten die wechselnde Tonhöhe in der Aufnahme eines Solo-Musikstückes
+bestimmen?
+	Grundfrequenz(en)
+
+8. Sie zerlegen ein relativ glattes, periodisches Signal in mehrere Abschnitte und
+bestimmen in jedem Abschnitt die lokale Fouriertransformation. Wie unterscheiden sich die
+lokalen Spektra vom Gesamtspektrum und warum?
+	mehr hohe frequenzen, wegen den Sprüngen an den Fensterrändern
+
+9. Was bedeutet die Komplementarität von Frequenz und Zeit?
+	 Eine zeitliche
+Eingrenzung der Signaldauer ∆t bedeutet eine Ausweitung des
+Frequenzbandes ∆f . Umgekehrt gilt: Je eingeschränkter das
+Frequenzband eines Signals ist, desto größer muss zwangsläufig
+die Zeitdauer des Signals sein.
+
+
+10. Wie berechnet man die Frequenzunschärfe eines Signals?
+	∆t · ∆f ≥ 0.88 bzw. σt · σω ≥ 1
+
+11. Was besagt die Frequenz-Zeit-Unschärferelation?
+	Man kann niemals gleichzeitig Zeitdauer und Frequenz genauer
+als σt · σω = 1 angeben. Dies ist eine fundamentale Grenze der
+Fourieranalysis und damit auch der Physik
+
+12. Bei welchem Signal ist das Produkt aus Zeit- und Frequenzunschärfe genau gleich 1?
+	Gabor-Wavelet
+
+13. Was ist der Unterschied zwischen der Fourierreihe und dem Spektrum eines periodischen
+Signals?
+	Das Spektrum der kontinuierlichen Fouriertransformation lässt sich als Grenzfall des Linienspektrums
+der Fourierreihe für den Grenzübergang T -> unendl. einer unendlich großen Signal-Periodendauer darstellen.
+
+14. Was ist die Ausblendeigenschaft des Dirac-Impulses?
+	integral: δ(t) · f (t) dt = f (0).
+
+15. Bei dem Spektrum eines Signals ist der Realteil gerade und der Imaginärteil ungerade.
+Um was für einen Signaltyp handelt es sich?
+	reelles Signal, ohne Symmetrie
+
+16. Die Fouriertransformierte von f_1(t) sei F_1(ω), die Fouriertransformierte von f_2(t)
+sei F_2(ω). Wie sieht die Fouriertransformierte von f(t) = 3 f_1(t) - 0.7 f_2(t) aus, und
+welche Eigenschaft macht man sich dabei zunutze?
+	aus der Linearitätseigenschaft folgt F(t) = 3 * F_1(ω) - 0.7 * F_2(ω)
+
+17. Was passiert mit dem Spektrum eines Signals, wenn man es in zeitlicher Richtung
+verschiebt?
+	f (t − a) °--* e^(−iωa) · F(ω)
+-> Betrag bleibt, Phase ändert sich
+
+18. Wie sieht das Spektrum eines Signals aus, das um den Faktor 2 im Zeitbereich gestreckt
+wird?
+	f (a · t) °--* 1/a · F(ω/a)
+
+19. Was passiert mit dem Spektrum eines Signals, wenn man es mit einem konstanten
+Phasenfaktor mit dem Phasenwinkel a multipliziert?
+
+
+20. Was ist das Gibbs-Phänomen?
+	über/unterschwinger der Fouriertransformierten bei Sprüngen Im Ausgangssignal

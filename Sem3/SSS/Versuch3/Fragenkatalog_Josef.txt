@@ -1,0 +1,63 @@
+Fragenkatalog zu Testat 3
+==========================
+
+
+1. Wie verändert sich das Spektrums einer Rechteckschwingung mit fester Impulsdauer, bei der die Periode immer weiter erhöht wird?
+	A: Das Spektrum wird immer kleiner, da f=1/T. Wenn T größer wird, wird f kleiner 
+
+2. Was ist ein fastperiodisches Signal?
+	A: ein fastperiodisches Signal ist nur über eine bestimmte Zeitspanne periodisch
+
+3. Sie beobachten ein Spektrum aus mehreren Linien bei 100 Hz, 200 Hz, 270 Hz, 400 Hz und 800 Hz. Um was für einen Signaltyp handelt es sich?
+	A: Nicht lineares Signal
+
+4. Welche Signale lassen sich als Fourierreihe darstellen?
+	A: Alle periodischen Signale, die die Dirichletbedingung nicht verletzen
+
+5. Wie sieht das Spektrum eines einzelnen Rechteckimpulses aus?
+	A: Das Spektrum ist eine Gaußsche-Kurve
+
+6. Wie sieht die Fouriertransformierte des mit 2 skalierten Einheitsimpulses aus?
+	A: ?
+
+7. Wie kann man am Besten die wechselnde Tonhöhe in der Aufnahme eines Solo-Musikstückes bestimmen?
+
+8. Sie zerlegen ein relativ glattes, periodisches Signal in mehrere Abschnitte und bestimmen in jedem Abschnitt die lokale Fouriertransformation. Wie unterscheiden sich die
+lokalen Spektra vom Gesamtspektrum und warum?
+	A: Die Frequenz ist viel höher bei den einzelnen Spektren
+
+9. Was bedeutet die Komplementarität von Frequenz und Zeit?
+	A: Je kürzer die Dauer eines Impulses, desto breiter wird sein Frequenzband. Ebenso, je schmaler das Frequenzband, desto größer muss zwangsläufig die Zeit sein. Das heißt auch im Bezug auf die Unschärferelation, dass ein breiteres Frequenzband daraus resultiert, dass das zu analysierende Signal zu kurz gewesen ist.
+
+10. Wie berechnet man die Frequenzunschärfe eines Signals?
+	A: Mittels der Standardabweichung von Zeit und Frequenz.
+
+11. Was besagt die Frequenz-Zeit-Unschärferelation?
+	A: Die Frequenz-Zeit-Unschärferelation beschreibt den Zusammenhang zwischen der Linienbreite (Frequenzunschärfe) und der Dauer. 
+
+12. Bei welchem Signal ist das Produkt aus Zeit- und Frequenzunschärfe genau gleich 1?
+	A: Bei keinem, da der maximale Schärfegrad bei 0,88 liegt
+
+13. Was ist der Unterschied zwischen der Fourierreihe und dem Spektrum eines periodischen Signals?
+	A: 
+
+14. Was ist die Ausblendeigenschaft des Dirac-Impulses?
+
+15. Bei dem Spektrum eines Signals ist der Realteil gerade und der Imaginärteil ungerade. Um was für einen Signaltyp handelt es sich?
+	A: Um ein periodisches Signal?
+
+16. Die Fouriertransformierte von f_1(t) sei F_1(ω), die Fouriertransformierte von f_2(t) 
+sei F_2(ω). Wie sieht die Fouriertransformierte von f(t) = 3 f_1(t) - 0.7 f_2(t) aus, und
+welche Eigenschaft macht man sich dabei zunutze?
+	A: Linearitätseigenschaft. F(w) = 3 * F1(w) - 0.7 * F2(w)
+
+17. Was passiert mit dem Spektrum eines Signals, wenn man es in zeitlicher Richtung verschiebt?
+	A: Nur die Phase ändert sich
+
+18. Wie sieht das Spektrum eines Signals aus, das um den Faktor 2 im Zeitbereich gestreckt wird?
+	A: Das Signal ist gestreckt und hat damit eine niedrigere Frequenz. Das Spektrum verschiebt sich dadurch um den Faktor 2.
+
+19. Was passiert mit dem Spektrum eines Signals, wenn man es mit einem konstanten Phasenfaktor mit dem Phasenwinkel a multipliziert?
+
+20. Was ist das Gibbs-Phänomen?
+	A: Auftreten von Unter- und Überschwingungen mit gleichbleibenden Amplitude

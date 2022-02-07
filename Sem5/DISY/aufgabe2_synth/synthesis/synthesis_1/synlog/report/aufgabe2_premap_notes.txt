@@ -1,0 +1,20 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: BN362 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_buffer.vhd":35:2:35:3|Removing sequential instance state (in view: work.sync_buffer_2(verhalten)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_buffer.vhd":35:2:35:3|Removing sequential instance state (in view: work.sync_buffer_1(verhalten)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_buffer.vhd":35:2:35:3|Removing sequential instance state (in view: work.sync_buffer_0(verhalten)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN115 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_module.vhd":74:1:74:2|Removing instance u1 (in view: work.sync_module(verhalten)) of type view:work.sync_buffer_2(verhalten) because it does not drive other instances.
+@N: BN115 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_module.vhd":88:1:88:2|Removing instance u2 (in view: work.sync_module(verhalten)) of type view:work.sync_buffer_1(verhalten) because it does not drive other instances.
+@N: BN115 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_module.vhd":102:1:102:2|Removing instance u3 (in view: work.sync_module(verhalten)) of type view:work.sync_buffer_0(verhalten) because it does not drive other instances.
+@N: BN362 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_module.vhd":56:2:56:3|Removing sequential instance strb15 (in view: work.sync_module(verhalten)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN115 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\aufgabe2.vhd":81:3:81:4|Removing instance u1 (in view: work.aufgabe2(structure)) of type view:work.sync_module(verhalten) because it does not drive other instances.
+@N: BN362 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_buffer.vhd":35:2:35:3|Removing sequential instance r2 (in view: work.sync_buffer_2(verhalten)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_buffer.vhd":35:2:35:3|Removing sequential instance r2 (in view: work.sync_buffer_1(verhalten)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_buffer.vhd":35:2:35:3|Removing sequential instance r2 (in view: work.sync_buffer_0(verhalten)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_buffer.vhd":35:2:35:3|Removing sequential instance r1 (in view: work.sync_buffer_2(verhalten)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_buffer.vhd":35:2:35:3|Removing sequential instance r1 (in view: work.sync_buffer_1(verhalten)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\sync_buffer.vhd":35:2:35:3|Removing sequential instance r1 (in view: work.sync_buffer_0(verhalten)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: FX1184 |Applying syn_allowed_resources blockrams=10 on top level netlist aufgabe2 
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+@N: BN225 |Writing default property annotation file C:\Users\ds-02\Documents\DISY\aufgabe2_synth\synthesis\synthesis_1\aufgabe2.sap.

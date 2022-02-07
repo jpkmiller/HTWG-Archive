@@ -1,0 +1,5 @@
+@E: CL219 :"C:\Users\ds-02\Documents\DISY\aufgabe2\sync_buffer.vhd":29:8:29:13|Multiple non-tristate drivers for net dout_t in sync_buffer
+@E: CL229 :"C:\Users\ds-02\Documents\DISY\aufgabe2\sync_buffer.vhd":29:8:29:13|Unresolved tristate drivers for net dout_t in sync_buffer
+@E: Could not find specified top level aufgabe2 (library: work, cell: aufgabe2)
+@E::Error while linking, aborting.
+

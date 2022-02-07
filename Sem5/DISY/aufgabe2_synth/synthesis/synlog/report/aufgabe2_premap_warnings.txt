@@ -1,0 +1,1 @@
+@W: MT530 :"c:\users\ds-02\documents\disy\aufgabe2\sync_buffer.vhd":59:2:59:3|Found inferred clock aufgabe2|clk which controls 80 sequential elements including u1.buf1.cnt[4:0]. This clock has no specified timing constraint which may adversely impact design performance. 

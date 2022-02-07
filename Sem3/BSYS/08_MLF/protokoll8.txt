@@ -1,0 +1,47 @@
+Figure 8.2
+python .\mlfq-2.py --jlist 0,200,0 -q 10 -c
+
+One job job running for 200ms, issuing no I/O and starting at 0. 
+Using a timeslice of 10 ms.
+
+Figure 8.3
+python .\mlfq-2.py --jlist 0,200,0:100,20,0 -q 10 -c
+
+2 jobs: One job running for 200ms, issuing no I/O and starting at 0.
+	Second job running for 20ms, issuing no I/O and starting at 100
+
+Figure 8.4
+python .\mlfq-2.py --jlist 0,200,0:50,30,1 -q 10 -c
+
+2 jobs: One job running for 200ms, issuing no I/O and starting at 0.
+	Second job running for 20ms in total, running 1 second and issuing an I/O after that
+
+Figure 8.5
+python .\mlfq-2.py --jlist 0,200,0:100,30,3:100,30,3 -q 10 -i 3 -S -c
+
+3 jobs: One job running for 100 ms, issuing no I/O and starting at 0.
+	2 jobs running each for about 30ms, issuing I/O after 3ms.
+	No Priority Boost
+
+Figure 8.5 right with -B 50 for Priority Boost every 50ms
+python .\mlfq-2.py --jlist 0,200,0:100,30,3:100,30,3 -q 10 -i 3 -S -B 50 -c
+
+
+Figure 8.6 
+python .\mlfq-2.py --jlist 0,200,0:80,90,9 -q 10 -S -i 1 -c
+
+Figure 8.6 right with Gaming Tolerance
+python .\mlfq-2.py --jlist 0,200,0:80,90,9 -q 10 -i 1 -c
+
+Figure 8.7
+python .\mlfq-2.py --jlist 0,130,0:0,130,0 -a 2 -Q 10,20,40 -c
+
+
+
+-S flag invokes older Rules 4a and 4b, which means that if a job issues an
+I/O before completing its time slice, it will return to that same priority
+queue when it resumes execution, with its full time-slice intact.
+-q timeslice is set to 10ms -> Job 0 starts an I/O before finishing up its timeslice! => because of older rules 4a & b this process will stay the same priority.
+It games the scheduler
+-a alotment -> when exceeded job priority is reduced
+-q time of a quantum slice -> when exceeded job priority is reduced

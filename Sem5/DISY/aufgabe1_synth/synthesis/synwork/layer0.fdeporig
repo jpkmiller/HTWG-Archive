@@ -1,0 +1,31 @@
+#defaultlanguage:vhdl
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\ds-02\\Documents\\DISY\\aufgabe1_synth\\synthesis\\synwork\\aufgabe1_comp.srs|-top|work.aufgabe1|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-ignore_undefined_lib|-lib|work|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\bin64\\c_vhdl.exe":1617265533
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\location.map":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\std.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd\\snps_haps_pkg.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\std1164.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\std_textio.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\numeric.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd\\umr_capim.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\arith.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd2008\\unsigned.vhd":1617265541
+#CUR:"C:\\Microsemi\\Libero_SoC_v2021.1\\SynplifyPro\\lib\\vhd\\hyperents.vhd":1617265541
+#CUR:"C:\\Users\\ds-02\\Documents\\DISY\\aufgabe1_synth\\hdl\\hex4x7seg.vhd":1637746934
+#CUR:"C:\\Users\\ds-02\\Documents\\DISY\\aufgabe1_synth\\hdl\\aufgabe1.vhd":1637677248
+0 "C:\Users\ds-02\Documents\DISY\aufgabe1_synth\hdl\hex4x7seg.vhd" vhdl
+1 "C:\Users\ds-02\Documents\DISY\aufgabe1_synth\hdl\aufgabe1.vhd" vhdl
+
+# Dependency Lists (Uses list)
+0 -1
+1 0 
+
+# Dependency Lists (Users Of)
+0 1 
+1 -1
+
+# Design Unit to File Association
+arch work hex4x7seg struktur 0
+module work hex4x7seg 0
+arch work aufgabe1 struktur 1
+module work aufgabe1 1

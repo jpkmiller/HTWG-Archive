@@ -1,0 +1,13 @@
+#--  Synopsys, Inc.
+#--  Version R-2020.09M-SP1-1
+#--  Project file C:\Users\ds-02\Documents\DISY\aufgabe1_synth\synthesis\aufgabe1_syn.prd
+#--  Written on Wed Nov 24 09:45:52 2021
+
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

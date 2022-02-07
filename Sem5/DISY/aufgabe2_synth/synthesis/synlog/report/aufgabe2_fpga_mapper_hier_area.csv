@@ -1,0 +1,9 @@
+
+. Module name, SLE, CFG, ARI1, BUFFER, MACC, RAM1K18, RAM64X18, GLOBAL, IO
+. aufgabe2, 80, 100, 55, 0, 0, 0, 0, 2, 28
+.	. hex4x7seg, 17, 19, 22, 0, 0, 0, 0, 0, 0
+.	. std_counter, 17, 16, 18, 0, 0, 0, 0, 0, 0
+.	. sync_module, 46, 64, 15, 0, 0, 0, 0, 0, 0
+.	.	. sync_buffer, 10, 19, 0, 0, 0, 0, 0, 0, 0
+.	.	. sync_buffer_0, 10, 20, 0, 0, 0, 0, 0, 0, 0
+.	.	. sync_buffer_2, 10, 19, 0, 0, 0, 0, 0, 0, 0

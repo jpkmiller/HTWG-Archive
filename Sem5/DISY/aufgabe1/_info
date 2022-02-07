@@ -1,0 +1,292 @@
+m255
+K4
+z2
+!s11e vcom 2020.4 2020.10, Oct 14 2020
+!s11f vlog 2020.4 2020.10, Oct 14 2020
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/ds-02/Documents/DISY/aufgabe1
+Eaufgabe1
+Z0 w1636448006
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 51
+Z3 dC:/Microsemi/Libero_SoC_v2021.1/ModelSim/win32acoem
+Z4 8C:/Users/ds-02/Documents/DISY/aufgabe1/work/aufgabe1.vhd
+Z5 FC:/Users/ds-02/Documents/DISY/aufgabe1/work/aufgabe1.vhd
+l0
+L5 1
+VQ8CA465m:5H;ilaMZZ1450
+!s100 ^SjjFzPI5b?RcI:IZ@2TF3
+Z6 OW;C;2020.4;71
+32
+Z7 !s110 1637591771
+!i10b 1
+Z8 !s108 1637591770.000000
+Z9 !s90 -reportprogress|300|-work|work|-O0|C:/Users/ds-02/Documents/DISY/aufgabe1/work/aufgabe1.vhd|
+Z10 !s107 C:/Users/ds-02/Documents/DISY/aufgabe1/work/aufgabe1.vhd|
+!i113 1
+Z11 o-work work -O0
+Z12 tExplicit 1 CvgOpt 0
+Astruktur
+R1
+R2
+DEx4 work 8 aufgabe1 0 22 Q8CA465m:5H;ilaMZZ1450
+!i122 51
+l33
+L15 34
+Vb;MmTanmf8@1W;2_ei^Ji2
+!s100 ;=@Q<dmZTM5^i1GJBo0d91
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eaufgabe1_tb
+Z13 w1637598667
+R1
+R2
+!i122 147
+R3
+Z14 8C:/Users/ds-02/Documents/DISY/aufgabe1/work/tb/aufgabe1_tb.vhd
+Z15 FC:/Users/ds-02/Documents/DISY/aufgabe1/work/tb/aufgabe1_tb.vhd
+l0
+L5 1
+VL;IS>R7ejY3[;USWKRZ:B2
+!s100 20ZM[nG5:Yg]772Z:4inG0
+R6
+32
+Z16 !s110 1637746718
+!i10b 1
+Z17 !s108 1637746718.000000
+Z18 !s90 -reportprogress|300|-work|work|-O0|C:/Users/ds-02/Documents/DISY/aufgabe1/work/tb/aufgabe1_tb.vhd|
+Z19 !s107 C:/Users/ds-02/Documents/DISY/aufgabe1/work/tb/aufgabe1_tb.vhd|
+!i113 1
+R11
+R12
+Averhalten
+R1
+R2
+DEx4 work 11 aufgabe1_tb 0 22 L;IS>R7ejY3[;USWKRZ:B2
+!i122 147
+l34
+L9 264
+V=akb=S_GTM>h9[bJ_P1E]0
+!s100 >U7ZA^6HiJ:ljWJiBndIO2
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Eaufgabe2
+Z20 w1638954302
+R1
+R2
+!i122 150
+Z21 dC:/Users/ds-02/Documents/DISY/aufgabe2
+Z22 8C:/Users/ds-02/Documents/DISY/aufgabe2/work/aufgabe2.vhd
+Z23 FC:/Users/ds-02/Documents/DISY/aufgabe2/work/aufgabe2.vhd
+l0
+L5 1
+V_0C<jAHi@ni936n76;?k00
+!s100 6X8j6>Y2HRnONm2[`A5j83
+R6
+32
+Z24 !s110 1638954324
+!i10b 1
+Z25 !s108 1638954324.000000
+Z26 !s90 -reportprogress|300|-work|work|C:/Users/ds-02/Documents/DISY/aufgabe2/work/aufgabe2.vhd|
+Z27 !s107 C:/Users/ds-02/Documents/DISY/aufgabe2/work/aufgabe2.vhd|
+!i113 1
+R11
+R12
+Astructure
+R1
+R2
+DEx4 work 8 aufgabe2 0 22 _0C<jAHi@ni936n76;?k00
+!i122 150
+l72
+L17 101
+VP3REJdmb=VO_DmjJ`m1L23
+!s100 QDLJKYCWaBS?1`3H5YUaa1
+R6
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R11
+R12
+Ehex4x7seg
+Z28 w1637746872
+Z29 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z30 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R1
+R2
+!i122 149
+R3
+Z31 8C:/Users/ds-02/Documents/DISY/aufgabe1/work/hex4x7seg.vhd
+Z32 FC:/Users/ds-02/Documents/DISY/aufgabe1/work/hex4x7seg.vhd
+l0
+L6 1
+VOH48GjHmF5<:O`9V4PVV=0
+!s100 SW79J7d`>N0>EQ9l`>_:c0
+R6
+32
+Z33 !s110 1637746875
+!i10b 1
+Z34 !s108 1637746874.000000
+Z35 !s90 -reportprogress|300|-work|work|-O0|C:/Users/ds-02/Documents/DISY/aufgabe1/work/hex4x7seg.vhd|
+Z36 !s107 C:/Users/ds-02/Documents/DISY/aufgabe1/work/hex4x7seg.vhd|
+!i113 1
+R11
+R12
+Astruktur
+R29
+R30
+R1
+R2
+DEx4 work 9 hex4x7seg 0 22 OH48GjHmF5<:O`9V4PVV=0
+!i122 149
+l35
+L19 94
+VjSD0NUH4ITV<K=V08FEWC2
+!s100 PZDLYnihAIl38R`]:HSaE1
+R6
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R11
+R12
+Estd_counter
+R20
+R29
+R30
+R1
+R2
+!i122 151
+R21
+8C:/Users/ds-02/Documents/DISY/aufgabe2/work/std_counter.vhd
+FC:/Users/ds-02/Documents/DISY/aufgabe2/work/std_counter.vhd
+l0
+L6 1
+VA?GAIm>3QQOGgC0Th^1UC0
+!s100 >TILIn1GUVgoJ:2a9FE_g0
+R6
+32
+R24
+!i10b 1
+R25
+!s90 -reportprogress|300|-work|work|C:/Users/ds-02/Documents/DISY/aufgabe2/work/std_counter.vhd|
+!s107 C:/Users/ds-02/Documents/DISY/aufgabe2/work/std_counter.vhd|
+!i113 1
+R11
+R12
+Estd_counter_tb
+R20
+!i122 152
+R21
+Z37 8C:/Users/ds-02/Documents/DISY/aufgabe2/work/std_counter_tb.vhd
+Z38 FC:/Users/ds-02/Documents/DISY/aufgabe2/work/std_counter_tb.vhd
+l0
+L1 1
+Vm4bTILfgR5_hCPV?e9JXN1
+!s100 ?S115kKOSFXcUH1cQ_Ez<0
+R6
+32
+R24
+!i10b 1
+R25
+Z39 !s90 -reportprogress|300|-work|work|C:/Users/ds-02/Documents/DISY/aufgabe2/work/std_counter_tb.vhd|
+Z40 !s107 C:/Users/ds-02/Documents/DISY/aufgabe2/work/std_counter_tb.vhd|
+!i113 1
+R11
+R12
+Averhalten
+DEx4 work 14 std_counter_tb 0 22 m4bTILfgR5_hCPV?e9JXN1
+R29
+R30
+R2
+R1
+!i122 152
+l127
+L11 185
+V:TEa7L13=G^PY4eiE2LGW3
+!s100 MNjEaRodkoFV056z2eb3_0
+R6
+32
+R24
+!i10b 1
+R25
+R39
+R40
+!i113 1
+R11
+R12
+Esync_buffer
+R20
+R29
+R30
+R1
+R2
+!i122 153
+R21
+8C:/Users/ds-02/Documents/DISY/aufgabe2/work/sync_buffer.vhd
+FC:/Users/ds-02/Documents/DISY/aufgabe2/work/sync_buffer.vhd
+l0
+L6 1
+Vha520i^fBDQog^C0YTHI42
+!s100 I3z@OzSBWHQ19W`1Yb^ic0
+R6
+32
+R24
+!i10b 1
+R25
+!s90 -reportprogress|300|-work|work|C:/Users/ds-02/Documents/DISY/aufgabe2/work/sync_buffer.vhd|
+!s107 C:/Users/ds-02/Documents/DISY/aufgabe2/work/sync_buffer.vhd|
+!i113 1
+R11
+R12
+Esync_module
+R20
+R29
+R30
+R1
+R2
+!i122 154
+R21
+8C:/Users/ds-02/Documents/DISY/aufgabe2/work/sync_module.vhd
+FC:/Users/ds-02/Documents/DISY/aufgabe2/work/sync_module.vhd
+l0
+L6 1
+VXOnDbUzVKEXhmk@iRz]nJ2
+!s100 OH<cB<dali]g;k`MYka`O0
+R6
+32
+!s110 1638954325
+!i10b 1
+!s108 1638954325.000000
+!s90 -reportprogress|300|-work|work|C:/Users/ds-02/Documents/DISY/aufgabe2/work/sync_module.vhd|
+!s107 C:/Users/ds-02/Documents/DISY/aufgabe2/work/sync_module.vhd|
+!i113 1
+R11
+R12

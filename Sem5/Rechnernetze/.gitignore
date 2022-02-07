@@ -1,0 +1,10 @@
+/Beispiele
+/Folien
+/.idea
+/Praxis/Aufgabe1_RealTime/.idea/
+/Praxis/Aufgabe1_EventList/.idea
+*.pyc
+*.docx
+*.xlsx
+*.pptx
+*.zip

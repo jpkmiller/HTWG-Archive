@@ -1,0 +1,313 @@
+#Build: Synplify Pro (R) R-2020.09M-SP1-1, Build 100R, Feb 17 2021
+#install: C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+#OS: Windows 8 6.2
+#Hostname: DS-PC02
+
+# Wed Nov 24 09:13:32 2021
+
+#Implementation: synthesis
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2020.09M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DS-PC02
+
+Implementation : synthesis
+Synopsys HDL Compiler, Version comp202009synp2, Build 102R, Built Feb 17 2021 10:19:36, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2020.09M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DS-PC02
+
+Implementation : synthesis
+Synopsys VHDL Compiler, Version comp202009synp2, Build 107R, Built Feb 19 2021 02:50:50, @
+
+@N|Running in 64-bit mode
+@N:"C:\Users\ds-02\Documents\DISY\aufgabe1_synth\hdl\aufgabe1.vhd":5:7:5:14|Top entity is set to aufgabe1.
+VHDL syntax check successful!
+@N: CD231 :"C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro\lib\vhd2008\std1164.vhd":888:16:888:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe1_synth\hdl\aufgabe1.vhd":5:7:5:14|Synthesizing work.aufgabe1.struktur.
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe1_synth\hdl\hex4x7seg.vhd":6:7:6:15|Synthesizing work.hex4x7seg.struktur.
+Post processing for work.hex4x7seg.struktur
+Running optimization stage 1 on hex4x7seg .......
+Finished optimization stage 1 on hex4x7seg (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+Post processing for work.aufgabe1.struktur
+Running optimization stage 1 on aufgabe1 .......
+Finished optimization stage 1 on aufgabe1 (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+Running optimization stage 2 on hex4x7seg .......
+Finished optimization stage 2 on hex4x7seg (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+Running optimization stage 2 on aufgabe1 .......
+Finished optimization stage 2 on aufgabe1 (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\ds-02\Documents\DISY\aufgabe1_synth\synthesis\synwork\layer0.rt.csv
+
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Nov 24 09:13:33 2021
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2020.09M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DS-PC02
+
+Implementation : synthesis
+Synopsys Synopsys Netlist Linker, Version comp202009synp2, Build 102R, Built Feb 17 2021 10:19:36, @
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 90MB peak: 91MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Nov 24 09:13:33 2021
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: C:\Users\ds-02\Documents\DISY\aufgabe1_synth\synthesis\synwork\aufgabe1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 29MB peak: 29MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Nov 24 09:13:33 2021
+
+###########################################################]
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2020.09M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DS-PC02
+
+Implementation : synthesis
+Synopsys HDL Compiler, Version comp202009synp2, Build 102R, Built Feb 17 2021 10:19:36, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2020.09M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DS-PC02
+
+Implementation : synthesis
+Synopsys VHDL Compiler, Version comp202009synp2, Build 107R, Built Feb 19 2021 02:50:50, @
+
+@N|Running in 64-bit mode
+@N:"C:\Users\ds-02\Documents\DISY\aufgabe1_synth\hdl\aufgabe1.vhd":5:7:5:14|Top entity is set to aufgabe1.
+VHDL syntax check successful!
+@N: CD231 :"C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro\lib\vhd2008\std1164.vhd":888:16:888:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe1_synth\hdl\aufgabe1.vhd":5:7:5:14|Synthesizing work.aufgabe1.struktur.
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe1_synth\hdl\hex4x7seg.vhd":6:7:6:15|Synthesizing work.hex4x7seg.struktur.
+Post processing for work.hex4x7seg.struktur
+Running optimization stage 1 on hex4x7seg .......
+Finished optimization stage 1 on hex4x7seg (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+Post processing for work.aufgabe1.struktur
+Running optimization stage 1 on aufgabe1 .......
+Finished optimization stage 1 on aufgabe1 (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+Running optimization stage 2 on hex4x7seg .......
+Finished optimization stage 2 on hex4x7seg (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+Running optimization stage 2 on aufgabe1 .......
+Finished optimization stage 2 on aufgabe1 (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\ds-02\Documents\DISY\aufgabe1_synth\synthesis\synwork\layer0.rt.csv
+
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Nov 24 09:13:33 2021
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2020.09M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DS-PC02
+
+Implementation : synthesis
+Synopsys Synopsys Netlist Linker, Version comp202009synp2, Build 102R, Built Feb 17 2021 10:19:36, @
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 90MB peak: 91MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Nov 24 09:13:33 2021
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: C:\Users\ds-02\Documents\DISY\aufgabe1_synth\synthesis\synwork\aufgabe1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 29MB peak: 29MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Nov 24 09:13:33 2021
+
+###########################################################]
+Premap Report
+
+# Wed Nov 24 09:13:35 2021
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2020.09M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DS-PC02
+
+Implementation : synthesis
+Synopsys Generic Technology Pre-mapping, Version map202009act, Build 069R, Built Mar 17 2021 10:25:05, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 118MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 130MB)
+
+Reading constraint file: C:\Users\ds-02\Documents\DISY\aufgabe1_synth\designer\aufgabe1\synthesis.fdc
+@L: C:\Users\ds-02\Documents\DISY\aufgabe1_synth\synthesis\aufgabe1_scck.rpt 
+See clock summary report "C:\Users\ds-02\Documents\DISY\aufgabe1_synth\synthesis\aufgabe1_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 130MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 130MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 130MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 130MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=10 on top level netlist aufgabe1 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 162MB peak: 162MB)
+
+
+
+Clock Summary
+******************
+
+          Start            Requested     Requested     Clock        Clock                   Clock
+Level     Clock            Frequency     Period        Type         Group                   Load 
+-------------------------------------------------------------------------------------------------
+0 -       aufgabe1|clk     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     17   
+=================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                 Clock     Source        Clock Pin       Non-clock Pin     Non-clock Pin
+Clock            Load      Pin           Seq Example     Seq Example       Comb Example 
+----------------------------------------------------------------------------------------
+aufgabe1|clk     17        clk(port)     u1.strb14.C     -                 -            
+========================================================================================
+
+@W: MT530 :"c:\users\ds-02\documents\disy\aufgabe1_synth\hdl\hex4x7seg.vhd":38:2:38:3|Found inferred clock aufgabe1|clk which controls 17 sequential elements including u1.cnt14[13:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\Users\ds-02\Documents\DISY\aufgabe1_synth\synthesis\aufgabe1.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 163MB peak: 163MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 163MB peak: 163MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 163MB peak: 163MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 81MB peak: 165MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Nov 24 09:13:36 2021
+
+###########################################################]

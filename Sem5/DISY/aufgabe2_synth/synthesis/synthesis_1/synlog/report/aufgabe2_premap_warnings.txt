@@ -1,0 +1,1 @@
+@W: MT530 :"c:\users\ds-02\documents\disy\aufgabe2_synth\hdl\std_counter.vhd":61:6:61:7|Found inferred clock aufgabe2|clk which controls 33 sequential elements including u2.cnt[15:0]. This clock has no specified timing constraint which may adversely impact design performance. 

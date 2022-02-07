@@ -1,0 +1,496 @@
+./x86.py -p loop.s -t 1 -i 100 -R dx
+ARG seed 0
+ARG numthreads 1
+ARG program loop.s
+ARG interrupt frequency 100
+ARG interrupt randomness False
+ARG argv
+ARG load address 1000
+ARG memsize 128
+ARG memtrace
+ARG regtrace dx
+ARG cctrace False
+ARG printstats False
+ARG verbose False
+
+   dx          Thread 0
+    ?
+    ?   1000 sub  $1,%dx
+    ?   1001 test $0,%dx
+    ?   1002 jgte .top
+    ?   1003 halt
+
+
+   dx          Thread 0
+    0
+    -1   1000 sub  $1,%dx
+    -1   1001 test $0,%dx
+    -1   1002 jgte .top
+    -1   1003 halt
+
+-------------------------------------------------------------------------------------------------------
+
+No. 2
+
+python ./x86.py -p loop.s -t 2 -i 100 -a dx=3,dx=3 -R dx
+ARG seed 0
+ARG numthreads 2
+ARG program loop.s
+ARG interrupt frequency 100
+ARG interrupt randomness False
+ARG argv dx=3,dx=3
+ARG load address 1000
+ARG memsize 128
+ARG memtrace
+ARG regtrace dx
+ARG cctrace False
+ARG printstats False
+ARG verbose False
+
+   dx          Thread 0                Thread 1
+    3
+    2   1000 sub  $1,%dx
+    2   1001 test $0,%dx
+    2   1002 jgte .top
+    1   1000 sub  $1,%dx
+    1   1001 test $0,%dx
+    1   1002 jgte .top
+    0   1000 sub  $1,%dx
+    0   1001 test $0,%dx
+    0   1002 jgte .top
+    -1   1000 sub  $1,%dx
+    -1   1001 test $0,%dx
+    -1   1002 jgte .top
+    -1   1003 halt
+    3   ----- Halt;Switch -----  ----- Halt;Switch -----
+    2                            1000 sub  $1,%dx
+    2                            1001 test $0,%dx
+    2                            1002 jgte .top
+    1                            1000 sub  $1,%dx
+    1                            1001 test $0,%dx
+    1                            1002 jgte .top
+    0                            1000 sub  $1,%dx
+    0                            1001 test $0,%dx
+    0                            1002 jgte .top
+    -1                            1000 sub  $1,%dx
+    -1                            1001 test $0,%dx
+    -1                            1002 jgte .top
+    -1                            1003 halt
+
+No, there is no race in this code because when Thread 0 halts Thread 1 is running its code.
+And because each thread has its own registers no thread is affecting the other.
+
+-------------------------------------------------------------------------------------------------------
+
+No. 3
+
+python ./x86.py -p loop.s -t 2 -i 3 -r -a dx=3,dx=3 -R dx
+ARG seed 0
+ARG numthreads 2
+ARG program loop.s
+ARG interrupt frequency 3
+ARG interrupt randomness True
+ARG argv dx=3,dx=3
+ARG load address 1000
+ARG memsize 128
+ARG memtrace
+ARG regtrace dx
+ARG cctrace False
+ARG printstats False
+ARG verbose False
+
+   dx          Thread 0                Thread 1
+    3
+    2   1000 sub  $1,%dx
+    2   1001 test $0,%dx
+    2   1002 jgte .top
+    3   ------ Interrupt ------  ------ Interrupt ------
+    2                            1000 sub  $1,%dx
+    2                            1001 test $0,%dx
+    2                            1002 jgte .top
+    2   ------ Interrupt ------  ------ Interrupt ------
+    1   1000 sub  $1,%dx
+    1   1001 test $0,%dx
+    2   ------ Interrupt ------  ------ Interrupt ------
+    1                            1000 sub  $1,%dx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1   1002 jgte .top
+    0   1000 sub  $1,%dx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1001 test $0,%dx
+    1                            1002 jgte .top
+    0   ------ Interrupt ------  ------ Interrupt ------
+    0   1001 test $0,%dx
+    0   1002 jgte .top
+    -1   1000 sub  $1,%dx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    0                            1000 sub  $1,%dx
+    -1   ------ Interrupt ------  ------ Interrupt ------
+    -1   1001 test $0,%dx
+    -1   1002 jgte .top
+    0   ------ Interrupt ------  ------ Interrupt ------
+    0                            1001 test $0,%dx
+    0                            1002 jgte .top
+    -1   ------ Interrupt ------  ------ Interrupt ------
+    -1   1003 halt
+    0   ----- Halt;Switch -----  ----- Halt;Switch -----
+    -1                            1000 sub  $1,%dx
+    -1                            1001 test $0,%dx
+    -1   ------ Interrupt ------  ------ Interrupt ------
+    -1                            1002 jgte .top
+    -1                            1003 halt
+
+No, even with random interrupts there is no change in the result of the two threads, because they still use values
+and results from their own set of registers. If there was a shared variable there will be a race.
+
+-------------------------------------------------------------------------------------------------------
+
+No. 4
+
+python  ./x86.py -p looping-race-nolock.s -t 1 -M 2000
+ARG seed 0
+ARG numthreads 1
+ARG program looping-race-nolock.s
+ARG interrupt frequency 50
+ARG interrupt randomness False
+ARG argv
+ARG load address 1000
+ARG memsize 128
+ARG memtrace 2000
+ARG regtrace
+ARG cctrace False
+ARG printstats False
+ARG verbose False
+
+ 2000          Thread 0
+    0
+    0   1000 mov 2000, %ax
+    0   1001 add $1, %ax
+    1   1002 mov %ax, 2000
+    1   1003 sub  $1, %bx
+    1   1004 test $0, %bx
+    1   1005 jgt .top
+    1   1006 halt
+
+-------------------------------------------------------------------------------------------------------
+
+No. 5
+
+python ./x86.py -p looping-race-nolock.s -t 2 -a bx=3 -M 2000
+ARG seed 0
+ARG numthreads 2
+ARG program looping-race-nolock.s
+ARG interrupt frequency 50
+ARG interrupt randomness False
+ARG argv bx=3
+ARG load address 1000
+ARG memsize 128
+ARG memtrace 2000
+ARG regtrace
+ARG cctrace False
+ARG printstats False
+ARG verbose False
+
+ 2000          Thread 0                Thread 1
+    0
+    0   1000 mov 2000, %ax
+    0   1001 add $1, %ax
+    1   1002 mov %ax, 2000
+    1   1003 sub  $1, %bx
+    1   1004 test $0, %bx
+    1   1005 jgt .top
+    1   1000 mov 2000, %ax
+    1   1001 add $1, %ax
+    2   1002 mov %ax, 2000
+    2   1003 sub  $1, %bx
+    2   1004 test $0, %bx
+    2   1005 jgt .top
+    2   1000 mov 2000, %ax
+    2   1001 add $1, %ax
+    3   1002 mov %ax, 2000
+    3   1003 sub  $1, %bx
+    3   1004 test $0, %bx
+    3   1005 jgt .top
+    3   1006 halt
+    3   ----- Halt;Switch -----  ----- Halt;Switch -----
+    3                            1000 mov 2000, %ax
+    3                            1001 add $1, %ax
+    4                            1002 mov %ax, 2000
+    4                            1003 sub  $1, %bx
+    4                            1004 test $0, %bx
+    4                            1005 jgt .top
+    4                            1000 mov 2000, %ax
+    4                            1001 add $1, %ax
+    5                            1002 mov %ax, 2000
+    5                            1003 sub  $1, %bx
+    5                            1004 test $0, %bx
+    5                            1005 jgt .top
+    5                            1000 mov 2000, %ax
+    5                            1001 add $1, %ax
+    6                            1002 mov %ax, 2000
+    6                            1003 sub  $1, %bx
+    6                            1004 test $0, %bx
+    6                            1005 jgt .top
+    6                            1006 halt
+
+
+-------------------------------------------------------------------------------------------------------
+
+No. 6
+
+python ./x86.py -p looping-race-nolock.s -t 2 -M 2000 -i 4 -r -s 0
+ARG seed 0
+ARG numthreads 2
+ARG program looping-race-nolock.s
+ARG interrupt frequency 4
+ARG interrupt randomness True
+ARG argv
+ARG load address 1000
+ARG memsize 128
+ARG memtrace 2000
+ARG regtrace
+ARG cctrace False
+ARG printstats False
+ARG verbose False
+
+ 2000          Thread 0                Thread 1
+    0
+    0   1000 mov 2000, %ax
+    0   1001 add $1, %ax
+    1   1002 mov %ax, 2000
+    1   1003 sub  $1, %bx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1000 mov 2000, %ax
+    1                            1001 add $1, %ax
+    2                            1002 mov %ax, 2000
+    2                            1003 sub  $1, %bx
+    2   ------ Interrupt ------  ------ Interrupt ------
+    2   1004 test $0, %bx
+    2   1005 jgt .top
+    2   ------ Interrupt ------  ------ Interrupt ------
+    2                            1004 test $0, %bx
+    2                            1005 jgt .top
+    2   ------ Interrupt ------  ------ Interrupt ------
+    2   1006 halt
+    2   ----- Halt;Switch -----  ----- Halt;Switch -----
+    2                            1006 halt
+
+
+python ./x86.py -p looping-race-nolock.s -t 2 -M 2000 -i 4 -r -s 1
+ARG seed 1
+ARG numthreads 2
+ARG program looping-race-nolock.s
+ARG interrupt frequency 4
+ARG interrupt randomness True
+ARG argv
+ARG load address 1000
+ARG memsize 128
+ARG memtrace 2000
+ARG regtrace
+ARG cctrace False
+ARG printstats False
+ARG verbose False
+
+ 2000          Thread 0                Thread 1
+    0
+    0   1000 mov 2000, %ax
+    0   ------ Interrupt ------  ------ Interrupt ------
+    0                            1000 mov 2000, %ax
+    0                            1001 add $1, %ax
+    1                            1002 mov %ax, 2000
+    1                            1003 sub  $1, %bx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1   1001 add $1, %ax
+    1   1002 mov %ax, 2000
+    1   1003 sub  $1, %bx
+    1   1004 test $0, %bx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1004 test $0, %bx
+    1                            1005 jgt .top
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1   1005 jgt .top
+    1   1006 halt
+    1   ----- Halt;Switch -----  ----- Halt;Switch -----
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1006 halt
+
+python ./x86.py -p looping-race-nolock.s -t 2 -M 2000 -i 4 -r -s 2
+ARG seed 2
+ARG numthreads 2
+ARG program looping-race-nolock.s
+ARG interrupt frequency 4
+ARG interrupt randomness True
+ARG argv
+ARG load address 1000
+ARG memsize 128
+ARG memtrace 2000
+ARG regtrace
+ARG cctrace False
+ARG printstats False
+ARG verbose False
+
+ 2000          Thread 0                Thread 1
+    0
+    0   1000 mov 2000, %ax
+    0   1001 add $1, %ax
+    1   1002 mov %ax, 2000
+    1   1003 sub  $1, %bx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1000 mov 2000, %ax
+    1                            1001 add $1, %ax
+    2                            1002 mov %ax, 2000
+    2                            1003 sub  $1, %bx
+    2   ------ Interrupt ------  ------ Interrupt ------
+    2   1004 test $0, %bx
+    2   ------ Interrupt ------  ------ Interrupt ------
+    2                            1004 test $0, %bx
+    2   ------ Interrupt ------  ------ Interrupt ------
+    2   1005 jgt .top
+    2   1006 halt
+    2   ----- Halt;Switch -----  ----- Halt;Switch -----
+    2                            1005 jgt .top
+    2                            1006 halt
+
+The timing in the interrupt DOES matter, because there is a critical point in the code where a value from
+memory is loaded into a register, incremented and then written back -> if the thread is interrupted before
+the modified value is written back to memory another thread that loads a value from the same address the result
+is not deterministic. Its indeterministic.
+
+-------------------------------------------------------------------------------------------------------
+
+No. 7
+
+python ./x86.py -p looping-race-nolock.s -a bx=1 -t 2 -M 2000 -i 1
+ARG seed 0
+ARG numthreads 2
+ARG program looping-race-nolock.s
+ARG interrupt frequency 1
+ARG interrupt randomness False
+ARG argv bx=1
+ARG load address 1000
+ARG memsize 128
+ARG memtrace 2000
+ARG regtrace
+ARG cctrace False
+ARG printstats False
+ARG verbose False
+
+ 2000          Thread 0                Thread 1
+    0
+    0   1000 mov 2000, %ax
+    0   ------ Interrupt ------  ------ Interrupt ------
+    0                            1000 mov 2000, %ax
+    0   ------ Interrupt ------  ------ Interrupt ------
+    0   1001 add $1, %ax
+    0   ------ Interrupt ------  ------ Interrupt ------
+    0                            1001 add $1, %ax
+    0   ------ Interrupt ------  ------ Interrupt ------
+    1   1002 mov %ax, 2000
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1002 mov %ax, 2000
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1   1003 sub  $1, %bx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1003 sub  $1, %bx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1   1004 test $0, %bx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1004 test $0, %bx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1   1005 jgt .top
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1005 jgt .top
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1   1006 halt
+    1   ----- Halt;Switch -----  ----- Halt;Switch -----
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1006 halt
+
+python ./x86.py -p looping-race-nolock.s -a bx=1 -t 2 -M 2000 -i 2
+ARG seed 0
+ARG numthreads 2
+ARG program looping-race-nolock.s
+ARG interrupt frequency 2
+ARG interrupt randomness False
+ARG argv bx=1
+ARG load address 1000
+ARG memsize 128
+ARG memtrace 2000
+ARG regtrace
+ARG cctrace False
+ARG printstats False
+ARG verbose False
+
+ 2000          Thread 0                Thread 1
+    0
+    0   1000 mov 2000, %ax
+    0   1001 add $1, %ax
+    0   ------ Interrupt ------  ------ Interrupt ------
+    0                            1000 mov 2000, %ax
+    0                            1001 add $1, %ax
+    0   ------ Interrupt ------  ------ Interrupt ------
+    1   1002 mov %ax, 2000
+    1   1003 sub  $1, %bx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1002 mov %ax, 2000
+    1                            1003 sub  $1, %bx
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1   1004 test $0, %bx
+    1   1005 jgt .top
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1                            1004 test $0, %bx
+    1                            1005 jgt .top
+    1   ------ Interrupt ------  ------ Interrupt ------
+    1   1006 halt
+    1   ----- Halt;Switch -----  ----- Halt;Switch -----
+    1                            1006 halt
+
+with -s 3 correct outputs are achieved
+
+-------------------------------------------------------------------------------------------------------
+
+No. 8
+
+small intervalls like -i 1 or -i 2 lead to a result of 100 but every other that is not i % 3 = 0 leads to results
+between 150 and 170
+
+-------------------------------------------------------------------------------------------------------
+
+No. 9
+
+python ./x86.py -p wait-for-me.s -a ax=1,ax=0 -R ax -M 2000
+ARG seed 0
+ARG numthreads 2
+ARG program wait-for-me.s
+ARG interrupt frequency 50
+ARG interrupt randomness False
+ARG argv ax=1,ax=0
+ARG load address 1000
+ARG memsize 128
+ARG memtrace 2000
+ARG regtrace ax
+ARG cctrace False
+ARG printstats False
+ARG verbose False
+
+ 2000      ax          Thread 0                Thread 1
+    0       1
+    0       1   1000 test $1, %ax
+    0       1   1001 je .signaller
+    1       1   1006 mov  $1, 2000
+    1       1   1007 halt
+    1       0   ----- Halt;Switch -----  ----- Halt;Switch -----
+    1       0                            1000 test $1, %ax
+    1       0                            1001 je .signaller
+    1       0                            1002 mov  2000, %cx
+    1       0                            1003 test $1, %cx
+    1       0                            1004 jne .waiter
+    1       0                            1005 halt
+
+
+-------------------------------------------------------------------------------------------------------
+
+No. 10
+
+Thread 0 runs till Thread 1 changes the value of the address 2000. It waits for the Thread 1 to run. No it does not
+efficiently uses the CPU because it only stops when a context switch to Thread 1 occured.

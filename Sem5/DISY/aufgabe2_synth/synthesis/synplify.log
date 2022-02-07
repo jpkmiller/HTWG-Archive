@@ -1,0 +1,25 @@
+This software has expired.
+
+                               Synplify Pro (R) 
+
+               Version R-2020.09M-SP1-1 for win64 - Feb 17, 2021 
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Starting:    C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro\bin64\mbin\synbatch.exe
+Install:     C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+Hostname:    DS-PC02
+Date:        Tue Jan 25 10:02:36 2022
+Version:     R-2020.09M-SP1-1
+
+Arguments:   -product synplify_pro -licensetype synplifypro_actel -batch -log synplify.log aufgabe2_syn.tcl
+ProductType: synplify_pro
+
+
+
+Running in Vendor Mode
+

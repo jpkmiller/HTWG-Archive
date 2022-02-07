@@ -1,0 +1,3 @@
+@W: CD638 :"C:\Users\ds-02\Documents\DISY\aufgabe2\sync_buffer.vhd":31:8:31:9|Signal r1 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\ds-02\Documents\DISY\aufgabe2\sync_buffer.vhd":32:8:32:9|Signal r2 is undriven. Either assign the signal a value or remove the signal declaration.
+

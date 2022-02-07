@@ -1,0 +1,131 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2020.09M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DS-PC02
+
+Implementation : synthesis
+Synopsys HDL Compiler, Version comp202009synp2, Build 102R, Built Feb 17 2021 10:19:36, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2020.09M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DS-PC02
+
+Implementation : synthesis
+Synopsys VHDL Compiler, Version comp202009synp2, Build 107R, Built Feb 19 2021 02:50:50, @
+
+@N|Running in 64-bit mode
+@N:"C:\Users\ds-02\Documents\DISY\aufgabe2\aufgabe2.vhd":5:7:5:14|Top entity is set to aufgabe2.
+File C:\Users\ds-02\Documents\DISY\aufgabe2\std_counter.vhd changed - recompiling
+File C:\Users\ds-02\Documents\DISY\aufgabe2\hex4x7seg.vhd changed - recompiling
+File C:\Users\ds-02\Documents\DISY\aufgabe2\sync_module.vhd changed - recompiling
+VHDL syntax check successful!
+File C:\Users\ds-02\Documents\DISY\aufgabe2\std_counter.vhd changed - recompiling
+@N: CD231 :"C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro\lib\vhd2008\std1164.vhd":888:16:888:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe2\aufgabe2.vhd":5:7:5:14|Synthesizing work.aufgabe2.structure.
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe2\hex4x7seg.vhd":6:7:6:15|Synthesizing work.hex4x7seg.struktur.
+Post processing for work.hex4x7seg.struktur
+Running optimization stage 1 on hex4x7seg .......
+Finished optimization stage 1 on hex4x7seg (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe2\std_counter.vhd":7:7:7:17|Synthesizing work.std_counter.verhalten.
+Post processing for work.std_counter.verhalten
+Running optimization stage 1 on std_counter .......
+Finished optimization stage 1 on std_counter (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe2\sync_module.vhd":6:7:6:17|Synthesizing work.sync_module.structure.
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe2\sync_buffer.vhd":6:7:6:17|Synthesizing work.sync_buffer.verhalten.
+@W: CD638 :"C:\Users\ds-02\Documents\DISY\aufgabe2\sync_buffer.vhd":31:8:31:9|Signal r1 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\ds-02\Documents\DISY\aufgabe2\sync_buffer.vhd":32:8:32:9|Signal r2 is undriven. Either assign the signal a value or remove the signal declaration.
+Post processing for work.sync_buffer.verhalten
+Running optimization stage 1 on sync_buffer .......
+Finished optimization stage 1 on sync_buffer (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Post processing for work.sync_module.structure
+Running optimization stage 1 on sync_module .......
+Finished optimization stage 1 on sync_module (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Post processing for work.aufgabe2.structure
+Running optimization stage 1 on aufgabe2 .......
+Finished optimization stage 1 on aufgabe2 (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on sync_buffer .......
+Finished optimization stage 2 on sync_buffer (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on sync_module .......
+Finished optimization stage 2 on sync_module (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+Running optimization stage 2 on std_counter .......
+Finished optimization stage 2 on std_counter (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 96MB)
+Running optimization stage 2 on hex4x7seg .......
+Finished optimization stage 2 on hex4x7seg (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 96MB)
+Running optimization stage 2 on aufgabe2 .......
+Finished optimization stage 2 on aufgabe2 (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 96MB)
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\ds-02\Documents\DISY\aufgabe2_synth\synthesis\synwork\layer0.rt.csv
+
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 94MB peak: 96MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Jan 25 10:16:26 2022
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2020.09M-SP1-1
+Install: C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DS-PC02
+
+Implementation : synthesis
+Synopsys Synopsys Netlist Linker, Version comp202009synp2, Build 102R, Built Feb 17 2021 10:19:36, @
+
+@N|Running in 64-bit mode
+File C:\Users\ds-02\Documents\DISY\aufgabe2_synth\synthesis\synwork\layer0.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 90MB peak: 90MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Jan 25 10:16:27 2022
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: C:\Users\ds-02\Documents\DISY\aufgabe2_synth\synthesis\synwork\aufgabe2_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 22MB peak: 23MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Jan 25 10:16:27 2022
+
+###########################################################]

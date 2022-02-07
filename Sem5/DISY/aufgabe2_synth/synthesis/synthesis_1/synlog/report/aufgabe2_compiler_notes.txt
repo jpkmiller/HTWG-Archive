@@ -1,0 +1,12 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N:"C:\Users\ds-02\Documents\DISY\aufgabe2_synth\hdl\aufgabe2.vhd":5:7:5:14|Top entity is set to aufgabe2.
+@N: CD231 :"C:\Microsemi\Libero_SoC_v2021.1\SynplifyPro\lib\vhd2008\std1164.vhd":888:16:888:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe2_synth\hdl\aufgabe2.vhd":5:7:5:14|Synthesizing work.aufgabe2.structure.
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe2_synth\hdl\hex4x7seg.vhd":6:7:6:15|Synthesizing work.hex4x7seg.struktur.
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe2_synth\hdl\std_counter.vhd":7:7:7:17|Synthesizing work.std_counter.verhalten.
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe2_synth\hdl\sync_module.vhd":6:7:6:17|Synthesizing work.sync_module.verhalten.
+@N: CD630 :"C:\Users\ds-02\Documents\DISY\aufgabe2_synth\hdl\sync_buffer.vhd":6:7:6:17|Synthesizing work.sync_buffer.verhalten.
+@N: CL159 :"C:\Users\ds-02\Documents\DISY\aufgabe2_synth\hdl\hex4x7seg.vhd":12:2:12:5|Input dpin is unused.
+@N|Running in 64-bit mode
+

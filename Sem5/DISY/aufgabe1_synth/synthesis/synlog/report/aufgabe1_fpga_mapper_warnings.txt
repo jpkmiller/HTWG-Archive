@@ -1,0 +1,3 @@
+@W: FA239 :"c:\users\ds-02\documents\disy\aufgabe1_synth\hdl\hex4x7seg.vhd":111:2:111:10|ROM seg_1[7:1] (in view: work.hex4x7seg(struktur)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@W: FA239 :"c:\users\ds-02\documents\disy\aufgabe1_synth\hdl\hex4x7seg.vhd":111:2:111:10|ROM seg_1[7:1] (in view: work.hex4x7seg(struktur)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@W: MT420 |Found inferred clock aufgabe1|clk with period 10.00ns. Please declare a user-defined clock on port clk.

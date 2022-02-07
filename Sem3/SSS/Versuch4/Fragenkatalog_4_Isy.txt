@@ -1,0 +1,175 @@
+1. Wie wirkt die Differentiation auf das Spektrum eines Signals?
+
+-> d.h. die Frequenz einer Sinusschwingung ändert sich nicht, nur ihr
+	Betrag um ω und ihre Phase um −π2.
+-> Die Ableitung im Frequenzbereich ist besonders einfach: simple
+	Multiplikation um den Faktor iω!
+
+
+2. Wie funktioniert die Faltung, um das Ausgangssignal eines Systems zur Zeit t zu 
+berechnen?
+
+-> kennt man die Antwort des Systems aufn jeden zeitverschobenen Dirac-Impuls, so weiß man die
+	Systemantwort auf jedes beliebige Signal.
+-> δ(t − τ ) → h(t − τ ).
+-y(t) = Integral von f (τ ) · h(t − τ ) dτ
+
+3. Wie sieht der Amplitudengang eines Differenzierers aus?
+
+-> Jede Sinussignal wird proportional zu seiner Frequenz verstärkt,
+	d.h. der Amplitudengang ist eine Gerade mit Steigung 1.
+
+4. Wie wirkt ein lineares System auf das Spektrum eines Signals?
+
+-> Jede Sinusschwingung kann beim Durchgang durch ein lineares
+	System in ihrer Amplitude und Phase verändert werden, aber
+	nicht in ihrer Frequenz.
+
+5. Was ist ein Bode-Diagramm?
+
+-> Darstellung des Frequenzgangs anhand der Größen ∠H(ω) und 20 log10 |H(ω)| in Abhängigkeit
+	von der logarithmierten Frequenz.
+
+6. Wie verändert der Phasengang eines linearen Systems die Phase des Eingangssignals?
+
+7. Wievielen Dezibel entspricht ein Verstärkungsfaktor von 100?
+
+-> 40 dB = 100
+
+8. Was ist Filterung?
+
+-> Bei vielen Anwendungen möchte man die relativen Amplituden der
+	Frequenzkomponenten in einem Signal verändern oder einige ganz ausschalten.
+
+9. Welche Eigenschaften haben ideale frequenzselektive Filter im Zeitbereich?
+
+-> Bei idealen frequenzselektiven Filtern werden bestimmte Frequenzen werden unverändert 
+	durchgelassen (d.h. H(ω) = 1), andere vollständig ausgeblendet (d.h. H(ω) = 0).
+-> Man spricht vom Durchlassbereich und Sperrbereich des Filters. Den Übergang  von Sperr- zu 
+	Durchlassbereich markiert die Grenzfrequenz.
+
+10. Wie muss man den Frequenzgang eines Filters im Spektralraum verändern, damit sich die
+Impulsantwort in der Zeitdomäne verschiebt?
+
+-> Verschiebt man die Impulsantwort so weit in in die Zukunft, dass der Teil links vom 
+	Ursprung vernachlässigbar wird, erhält man näherungsweise einen kausalen 
+	Filter mit (fast) idealen frequenzselektiven Eigenschaen.
+
+11. Was ist das Faltungsintegral?
+
+-> Die Zerlegung in Dirac-Impulse als Elementarsignale ist also
+	eine Alternative zur Zerlegung in Sinus- Schwingungen in der
+	Fouriertransformation.
+-> Es gilt genauso: kennt man die Antwort des Systems auf
+	jeden zeitverschobenen Dirac-Impuls, so weiß man die
+	Systemantwort auf jedes beliebige Signal.
+
+12. Wie kann man einen Vokal in einem Sprachsignal erkennen?
+
+-> Die Vokalerkennung entspricht einer Frequenzmessung.
+	Um eine Folge von Vokalen erkennen zu
+	können, benötigt man eine lokale Form der Fourieranalyse
+	innerhalb eines gleitenden Zeitfensters.
+
+13. Was ist ein Phonem?
+
+-> Phoneme: die Menge aller Phone, die in einer gesprochenen
+	Sprache die gleiche bedeutungsunterscheidende Funktion haben
+	(z.B. gerolltes “r” und Rachen-“r”).
+
+14. Wie funktioniert die Kurzzeit-Fouriertransformation?
+
+-> Signal wird in eine Folge überlappender Fenster zerlegt. Natürlich müssen die 
+	Fenster dicht genug aneinander liegen, um alle zeitlichen Veränderungen des Spektrums mitzubekommen.
+
+15. Was muss man bei der Wahl des Fensters bei der Kurzzeit-Fouriertransformation 
+beachten?
+
+
+//Algemein
+-> Wird ein KURZES Zeitfenster gewählt, lässt sich relativ genau
+	zeitlich lokalisieren, wann ein relativ breites Band benachbarter
+	Frequenzen wahrnehmbar war.
+-> Wird ein LÄNGERES Zeitfenster gewählt, lässt sich relativ ungenau
+	zeitlich lokalisieren, wann ein relativ schmales Band
+	benachbarter Frequenzen wahrnehmbar war.
+
+//Mit Gauss-Fenster
+-> Schmales GAUSS-Fenster im Zeitbereich
+		bedeutet schlechte Auflösung im Frequenzbereich
+		und hohe Auflösung im Zeitbereich
+
+-> Breites GAUSS-Fenster im Zeitbereich
+		bedeutet hohe Auflösung im Frequenzbereich
+		und schlechte Auflösung im Zeitbereich
+
+
+16. Wie funktioniert ein Nächste-Nachbar-Klassifikator?
+
+-> Der momentane Sprachinput wird mit den Referenzspektren verglichen. 
+	Das ähnlichste Referenzspektrum wird als die wahrscheinlichste
+	Wortbedeutung interpretiert.
+
+-> Referenzspektren können z.B. durch Mielung über mehrere
+	Aufnahmen desselben Wortes gewonnen werden.
+
+-> Ein solches Mustererkennungssystem wird als 
+	Nächster-Nachbar-Klassifikator oder PrototypenKlassifikator bezeichnet.
+
+17. Wie unterscheiden sich Korrelation und Kovarianz als Ähnlichkeitsmaß?
+
+-> Kovarianz: Wenn f (t) und g(t) ähnlich zueinander sind, dann sind sie o
+		gleichzeitig positiv oder gleichzeitig negativ (sie kovariieren).
+
+-> Korrelationskoeffizienten: 
+	rfg nahe an 1 bedeutet eine hohe Ähnlichkeit (positive Korrelation).
+	rfg nahe an 0 bedeutet keine Ähnlichkeit (keine Korrelation).
+	rfg nahe an –1 bedeutet eine “Anti-Ähnlichkeit” (negative Korrelation).
+
+
+18. Warum verwendet man meist nichtideale Filter mit welligen Durchlass- und 
+Sperrbereichen und einem Übergangsbereich statt idealen frequenzselektiven Filtern?
+
+-> Da ideale Filter nichtkausal sind, werden sie für
+	Echtzeitanwendungen oft durch nichtideale, aber kausale Filter
+	angenähert.
+
+
+19. Was sind Formanten?
+
+-> Dieser Hohlraumresonator verstärkt diejenigen Frequenzen, bei
+	denen sich in seinem Inneren stehende Wellen bilden können
+	und schwächt diejenigen, für die das nicht gilt, er wirkt also als
+	frequenzselektiver Verstärker und Filter.
+
+-> Diejenigen Frequenzbereiche, bei denen die relative Verstärkung
+	am höchsten ist, bezeichnet man als Formanten. Die ersten
+	beiden Formanten f1 und f2 charakterisieren die Vokale
+
+20. Wie wird die momentane Frequenz eines akustischen Eingangssignals in der 
+Basilarmembran des Innenohrs codiert?
+
+-> Die Basilarmembran schwingt nicht gleichmäßig über ihre
+	gesamte Länge, sondern zeigt ein ausgeprägtes,
+	frequenzabhängiges Maximum. Der Ort dieses Maximums wird
+	durch die variierende Dicke und Breite der Membran festgelegt,
+	so dass an jeder Stelle eine unterschiedliche Frequenz bevorzugt
+	wird.
+
+21. Was ist eine Schwebung?
+
+-> Eine Schwebung entsteht durch Überlagerung zweier
+	Sinusschwingungen annähernd gleicher Frequenz. Sie äußert sich in
+	einer periodischen Verstärkung und Abschwächung mit der
+	Schwebungsfrequenz ωS = 1/2(|ω1 − ω2|).
+
+22. Ein System liefert für eine Sinusschwingung als Eingangssignal eine doppelt so große
+Sinusschwingung gleicher Frequenz als Ausgangssignal, das um 10 ms verzögert ist. Um 
+welche Art von System handelt es sich?
+
+//Verzögerungsglied: 
+-> H(ω) = e−iωTt = 1 · ei(−ωTt )
+	Die Amplitude bleibt bei jeder Frequenz unverändert, d.h. der
+	Amplitudengang ist konstant 1.
+-> Die Phase ist ∠H(ω) = −ωTt, d.h. eine Ursprungsgerade mit
+	Steigung −Tt.

@@ -1,0 +1,63 @@
+Fragenkatalog Testat 2
+======================
+
+
+1. Wofür braucht man ein Dunkelbild?
+	A: Um den Dunkelstrom zu korrigieren
+
+2. Was bedeutet Vignettierung?
+	A: Die Helligkeitswerte ändern sich an den Bildrändern
+
+3. Wie findet man die "dead pixels" einer Kamera?
+	A: Dead pixels tauchen im Weißbild als dunkle Pixel auf.
+
+4. Wie sehen die Fourierkoeffizienten der zweiseitigen trigonometrischen Fourierreihe für 
+x(t) \= a cos(2 omega t) aus?
+	A: 
+
+5. Wie viele Terme hat die zweiseitige trigonometrische Fourierreihe von 1 + sin t + 3 cos 2t?
+	A: 3
+
+6. Welche Symmetrien hat die zweiseitige Fourierreihe?
+	Y-Achsensymmetrie
+
+7. Aus welchen Grundsignalen besteht die komplexe Fourierreihe?
+	A: Realteil beziehungsweise Cos-Anteil und Imaginärteil beziehungsweise Sin-Anteil
+
+8. Aus welchen Summentermen besteht die harmonische Form der Fourierreihe?
+	A: A * sin(wt)+B * cos(wt)
+
+9. Welchen Vorteil hat die trigonometrische Form der Fourierreihe gegenüber der harmonischen Form?
+	A: Das Wegfallen der Phase und die unbekannten Fourierkoeffizienten können berechnet werden
+
+10. Was ist der Unterschied zwischen der Menge der zweidimensionalen Vektoren und den komplexen Zahlen?
+	A: Es gibt keinen Unterschied.
+
+11. Was ist der Unterschied zwischen dem Skalarprodukt in einem zweidimensionalen Vektorraum und der Multiplikation zweier komplexer Zahlen?
+	A: Beim Skalarprodukt von zweidimensionalen Vektoren kommt ein Zahl hervor. Bei der Multiplikation zweier komplexer Zahlen kommt wieder eine komplexe Zahl raus. 
+
+12. Was ist die Phase einer Sinusschwingung?
+	A: Die zeitliche Verschiebung der Schwingung
+
+13. Was haben komplexe Zahlen mit Sinusschwingungen zu tun?
+	A: Mithilfe der komplexen Fouriertransformation lassen sich Sinusschwingungen in der kartesischen Darstellung der komplexen Zahlen darstellen
+
+14. Wie berechnet sich die Frequenz einer Sinusschwingung, das aus der Summe einer Sinus- und einer Cosinusfunktion gleicher Frequenz entsteht?
+	A: Frequenz ändert sich nicht?
+
+15. Was ist ein gerades Signal?
+	A: Ein gerade Signal ist ein Signal mit Symmetrie zur Y-Achse
+
+16. Was ist eine δ-Impulsfolge?
+	A: Bei einem Dirak-Impuls geht das Tastverhältnis gegen 0. Man bekommt einen Nadelimpuls als Ausgang, dessen Fläche 1 beträgt.
+
+17. Wie unterscheidet sich das Spektrum periodischer Rechteckimpulse von einer Gauß-Impulsfolge und warum?
+	A: Rechteckimpulse besitzen unendlich hohe Frequenzen
+
+18. Was ist die Regellage?
+	A: Die positive Seite des zweiseitigen Amplitudenspektrums ist die Regellage.
+
+19. Welches der unten aufgeführten Signale enthält keine unendlich hohen Frequenzen?
+
+20. Wie unterscheiden sich die Spektren von schnell und langsam veränderlichen Signalen?
+	A: Die Spektren schnell veränderlicher Signale haben „unendlich“ hohe Frequenzen
