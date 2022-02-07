@@ -1,0 +1,327 @@
+--- input-1.txt
+
+Time    Job     Ready-Queue             Actions
+0       A0      A0C0
+1       B0      A0C0B0                  A0 preempted
+2       B0      A0C0B0
+3       A0      A0C0
+4       A1      C0A1
+5       A1      C0A1
+6       B1      C0B1
+7       B1      C0B1
+8       A2      C0A2
+9       A2      C0A2
+10      C0      C0C1                    C0 missed deadline at 10
+-----------------------------------------------
+Task: A max. Reaktionszeit: 8
+Task: C max. Reaktionszeit: 10
+Task: B max. Reaktionszeit: 4
+
+
+
+
+--- input-2.txt
+
+Time    Job     Ready-Queue             Actions
+0       A0      A0B0C0
+1       B0      B0C0
+2       B0      B0C0
+3       A1      C0A1
+4       C0      C0
+5       B1      C0B1                    C0 preempted
+6       A2      C0B1A2                  B1 preempted
+7       B1      C0B1
+8       C0      C0C1                    C0 missed deadline at 8
+9       A3      C1A3                    C0 preempted
+10      B2      C1B2
+11      B2      C1B2
+12      A4      C1A4
+13      C1      C1
+14      C1      C1
+15      A5      C1A5B3                  C1 preempted
+16      B3      C1B3C2                  C1 missed deadline at 16
+17      B3      B3C2
+18      A6      C2A6
+19      C2      C2
+20      B4      C2B4                    C2 preempted
+21      A7      C2B4A7                  B4 preempted
+22      B4      C2B4
+23      C2      C2
+24      A8      C2A8C3                  C2 preempted
+25      B5      C3B5
+26      B5      C3B5
+27      A9      C3A9
+28      C3      C3
+29      C3      C3
+30      A10     C3A10B6                 C3 preempted
+31      B6      C3B6
+32      B6      C3B6C4                  C3 missed deadline at 32
+-----------------------------------------------
+Task: A max. Reaktionszeit: 11
+Task: C max. Reaktionszeit: 36
+Task: B max. Reaktionszeit: 18
+
+
+
+
+
+--- input-3.txt
+
+Time    Job     Ready-Queue             Actions
+0       X0      X0Z0
+1       Y0      X0Z0Y0                  X0 preempted
+2       Y0      X0Z0Y0
+3       X0      X0Z0
+4       X1      Z0X1
+5       X1      Z0X1
+6       Y1      Z0Y1
+7       Y1      Z0Y1
+8       X2      Z0X2
+9       X2      Z0X2
+10      Z0      Z0Z1                    Z0 missed deadline at 10
+11      Y2      Z1Y2
+12      Y2      Z1Y2X3
+13      X3      Z1X3
+14      X3      Z1X3
+15      Z1      Z1
+16      Y3      X4Y3
+17      Y3      X4Y3
+18      X4      X4
+19      X4      X4
+20      X5      X5Z2
+21      Y4      X5Z2Y4                  X5 preempted
+22      Y4      X5Z2Y4
+23      X5      X5Z2
+24      X6      Z2X6
+25      X6      Z2X6
+26      Y5      Z2Y5
+27      Y5      Z2Y5
+28      X7      Z2X7
+29      X7      Z2X7
+30      Z2      Z2Z3                    Z2 missed deadline at 30
+31      Y6      Z3Y6
+32      Y6      Z3Y6X8
+33      X8      Z3X8
+34      X8      Z3X8
+35      Z3      Z3
+36      Y7      X9Y7
+37      Y7      X9Y7
+38      X9      X9
+39      X9      X9
+40      X10     X10Z4
+-----------------------------------------------
+Task: X max. Reaktionszeit: 30
+Task: Z max. Reaktionszeit: 33
+Task: Y max. Reaktionszeit: 16
+
+
+
+
+
+--- input-4.txt
+
+Time    Job     Ready-Queue             Actions
+0       B0      B0C0
+1       B0      B0C0
+2       A0      B0C0A0                  B0 preempted
+3       A0      B0C0A0
+4       A0      B0C0A0
+5       B0      B0C0
+6       C0      C0
+7       C0      C0
+10      A1      A1B1
+11      A1      A1B1
+12      A1      A1B1
+13      B1      B1
+14      B1      B1C1
+15      B1      B1C1
+16      C1      C1
+17      C1      C1
+18      A2      A2
+19      A2      A2
+20      A2      A2B2
+21      B2      B2
+22      B2      B2
+23      B2      B2
+26      A3      A3
+27      A3      A3
+28      A3      A3C2
+29      C2      C2
+30      B3      C2B3                    C2 preempted
+-----------------------------------------------
+Task: A max. Reaktionszeit: 12
+Task: C max. Reaktionszeit: 15
+Task: B max. Reaktionszeit: 16
+
+
+
+
+
+--- input-5.txt
+
+Time    Job     Ready-Queue             Actions
+0       A0      A0B0C0D0
+1       A0      A0B0C0D0
+2       A0      A0B0C0D0
+3       B0      B0C0D0
+4       B0      B0C0D0
+5       B0      B0C0D0
+6       B0      B0C0D0
+7       B0      B0C0D0
+8       B0      B0C0D0
+9       B0      B0C0D0
+10      B0      B0C0D0
+11      B0      B0C0D0
+12      B0      B0C0D0
+13      C0      C0D0
+14      C0      C0D0
+15      A1      C0D0A1                  C0 preempted
+16      A1      C0D0A1
+17      A1      C0D0A1
+18      C0      C0D0
+19      C0      C0D0
+20      C0      C0D0
+21      C0      C0D0
+22      C0      C0D0
+23      C0      C0D0
+24      C0      C0D0
+25      C0      C0D0
+26      C0      C0D0
+27      C0      C0D0
+28      C0      C0D0
+29      C0      C0D0
+30      A2      C0D0A2B1                        C0 preempted
+31      A2      C0D0A2B1
+32      A2      C0D0A2B1
+33      B1      C0D0B1
+34      B1      C0D0B1
+35      B1      C0D0B1
+36      B1      C0D0B1
+37      B1      C0D0B1
+38      B1      C0D0B1
+39      B1      C0D0B1
+40      B1      C0D0B1
+41      B1      C0D0B1
+42      B1      C0D0B1
+43      C0      C0D0
+44      D0      D0
+45      A3      A3C1
+46      A3      A3C1
+47      A3      A3C1
+48      C1      C1
+49      C1      C1
+50      C1      C1
+51      C1      C1
+52      C1      C1
+53      C1      C1
+54      C1      C1
+55      C1      C1
+56      C1      C1
+57      C1      C1
+58      C1      C1
+59      C1      C1
+60      A4      C1A4B2D1                        C1 preempted
+61      A4      C1A4B2D1
+62      A4      C1A4B2D1
+63      B2      C1B2D1
+64      B2      C1B2D1
+65      B2      C1B2D1
+66      B2      C1B2D1
+67      B2      C1B2D1
+68      B2      C1B2D1
+69      B2      C1B2D1
+70      B2      C1B2D1
+71      B2      C1B2D1
+72      B2      C1B2D1
+73      C1      C1D1
+74      C1      C1D1
+75      A5      C1D1A5                  C1 preempted
+76      A5      C1D1A5
+77      A5      C1D1A5
+78      C1      C1D1
+79      D1      D1
+90      A6      A6B3C2
+91      A6      A6B3C2
+92      A6      A6B3C2
+93      B3      B3C2
+94      B3      B3C2
+95      B3      B3C2
+96      B3      B3C2
+97      B3      B3C2
+98      B3      B3C2
+99      B3      B3C2
+100     B3      B3C2
+101     B3      B3C2
+102     B3      B3C2
+103     C2      C2
+104     C2      C2
+105     A7      C2A7                    C2 preempted
+106     A7      C2A7
+107     A7      C2A7
+108     C2      C2
+109     C2      C2
+110     C2      C2
+111     C2      C2
+112     C2      C2
+113     C2      C2
+114     C2      C2
+115     C2      C2
+116     C2      C2
+117     C2      C2
+118     C2      C2
+119     C2      C2
+120     A8      C2A8B4D2                        C2 preempted
+121     A8      C2A8B4D2
+122     A8      C2A8B4D2
+123     B4      C2B4D2
+124     B4      C2B4D2
+125     B4      C2B4D2
+126     B4      C2B4D2
+127     B4      C2B4D2
+128     B4      C2B4D2
+129     B4      C2B4D2
+130     B4      C2B4D2
+131     B4      C2B4D2
+132     B4      C2B4D2
+133     C2      C2D2
+134     D2      D2
+135     A9      A9C3
+136     A9      A9C3
+137     A9      A9C3
+138     C3      C3
+139     C3      C3
+140     C3      C3
+141     C3      C3
+142     C3      C3
+143     C3      C3
+144     C3      C3
+145     C3      C3
+146     C3      C3
+147     C3      C3
+148     C3      C3
+149     C3      C3
+150     A10     C3A10B5                 C3 preempted
+151     A10     C3A10B5
+152     A10     C3A10B5
+153     B5      C3B5
+154     B5      C3B5
+155     B5      C3B5
+156     B5      C3B5
+157     B5      C3B5
+158     B5      C3B5
+159     B5      C3B5
+160     B5      C3B5
+161     B5      C3B5
+162     B5      C3B5
+163     C3      C3
+164     C3      C3
+165     A11     C3A11                   C3 preempted
+166     A11     C3A11
+167     A11     C3A11
+168     C3      C3
+180     A12     A12B6C4D3
+-----------------------------------------------
+Task: A max. Reaktionszeit: 36
+Task: D max. Reaktionszeit: 81
+Task: C max. Reaktionszeit: 157
+Task: B max. Reaktionszeit: 79

@@ -1,0 +1,876 @@
+
+__________________________________________________________________________________________________Input-9
+
+
+---------------------------./simulator -dm -kill -pip ./input-9.txt
+
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       B0              M0Z0B0                                  B0 locks I -> ok
+1       B0              M0Z0B0
+2       B0              M0Z0B0
+3       B0              M0Z0B0
+4       B0              M0Z0B0
+5       Z0              M0Z0                                    B0 unlocks: I + Z0 locks J -> ok
+6       Z0              M0Z0
+7       Z0              M0Z0
+8       Z0              M0Z0
+9       Z0              M0Z0
+10      Z0              M0Z0
+11      Z0              M0Z0
+12      Z0              M0Z0
+13      Z0              M0Z0
+14      Z0              M0Z0
+15      M0              M0                                      Z0 unlocks: J + M0 locks I -> ok
+16      M0              M0
+17      M0              M0
+18      M0              M0
+19      M0              M0
+20      M0              M0
+21      M0              M0
+22      M0              M0
+23      M0              M0
+24      M0              M0
+25      M0              M0
+26      M0              M0
+27      M0              M0
+28      M0              M0
+29      M0              M0
+30      M0              M0              B1                      B1 locks I -> blocked
+31      M0              M0              B1
+32      M0              M0              B1
+33      M0              M0              B1
+34      M0              M0              B1
+35      M0              M0              B1
+36      M0              M0              B1
+37      M0              M0              B1
+38      M0              M0              B1
+39      M0              M0              B1
+40      I                               B1                      M0 unlocks: I
+41      B1              B1                                      B1 locks I -> ok
+42      B1              B1
+43      B1              B1
+44      B1              B1
+45      B1              B1Z1
+46      Z1              Z1                                      B1 unlocks: I + Z1 locks J -> ok
+47      Z1              Z1
+48      Z1              Z1
+49      Z1              Z1
+50      Z1              Z1
+51      Z1              Z1
+52      Z1              Z1
+53      Z1              Z1
+54      Z1              Z1
+55      Z1              Z1
+56      I                                                       Z1 unlocks: J
+57      I
+58      I
+59      I
+60      B2              B2                                      B2 locks I -> ok
+61      B2              B2
+62      B2              B2
+63      B2              B2
+64      B2              B2
+65      I                                                       B2 unlocks: I
+66      I
+67      I
+68      I
+69      I
+70      I
+71      I
+72      I
+73      I
+74      I
+75      I
+76      I
+77      I
+78      I
+79      I
+80      I
+81      I
+82      I
+83      I
+84      I
+85      M1              M1                                      M1 locks I -> ok
+86      M1              M1
+87      M1              M1
+88      M1              M1
+89      M1              M1
+90      M1              M1Z2            B3                      B3 locks I -> blocked
+91      M1              M1Z2            B3
+92      M1              M1Z2            B3
+93      M1              M1Z2            B3
+94      M1              M1Z2            B3
+95      M1              M1Z2            B3
+96      M1              M1Z2            B3
+97      M1              M1Z2            B3
+98      M1              M1Z2            B3
+99      M1              M1Z2            B3
+100     M1              M1Z2            B3
+101     M1              M1Z2            B3
+102     M1              M1Z2            B3
+103     M1              M1Z2            B3
+104     M1              M1Z2            B3
+105     M1              M1Z2            B3
+106     M1              M1Z2            B3
+107     M1              M1Z2            B3
+108     M1              M1Z2            B3
+109     M1              M1Z2            B3
+110     Z2              Z2              B3                      M1 unlocks: I + Z2 locks J -> ok
+111     B3              Z2B3                                    [Z2 preempted] + B3 locks I -> ok
+112     B3              Z2B3
+113     B3              Z2B3
+114     B3              Z2B3
+115     B3              Z2B3
+116     Z2              Z2                                      B3 unlocks: I
+117     Z2              Z2
+118     Z2              Z2
+119     Z2              Z2
+120     B4              Z2B4                                    [Z2 preempted] + B4 locks I -> ok
+121     B4              Z2B4
+122     B4              Z2B4
+123     B4              Z2B4
+124     B4              Z2B4
+125     I                                                       Z2 missed Deadline (aborted) + Z2 unlocks: J + B4 unlocks: I
+126     I
+127     I
+128     I
+129     I
+130     I
+-----------------------------------------------
+Task: M max. Reaktionszeit: 40
+Task: Z max. Reaktionszeit: 35
+Task: B max. Reaktionszeit: 26
+Killed Jobs: Z2(t:125)
+
+
+
+-------------------------------./simulator -edf -kill -pip ./input-9.txt
+
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       B0              M0Z0B0                                  B0 locks I -> ok
+1       B0              M0Z0B0
+2       B0              M0Z0B0
+3       B0              M0Z0B0
+4       B0              M0Z0B0
+5       Z0              M0Z0                                    B0 unlocks: I + Z0 locks J -> ok
+6       Z0              M0Z0
+7       Z0              M0Z0
+8       Z0              M0Z0
+9       Z0              M0Z0
+10      Z0              M0Z0
+11      Z0              M0Z0
+12      Z0              M0Z0
+13      Z0              M0Z0
+14      Z0              M0Z0
+15      M0              M0                                      Z0 unlocks: J + M0 locks I -> ok
+16      M0              M0
+17      M0              M0
+18      M0              M0
+19      M0              M0
+20      M0              M0
+21      M0              M0
+22      M0              M0
+23      M0              M0
+24      M0              M0
+25      M0              M0
+26      M0              M0
+27      M0              M0
+28      M0              M0
+29      M0              M0
+30      M0              M0B1
+31      M0              M0B1
+32      M0              M0B1
+33      M0              M0B1
+34      M0              M0B1
+35      M0              M0B1
+36      M0              M0B1
+37      M0              M0B1
+38      M0              M0B1
+39      M0              M0B1
+40      B1              B1                                      M0 unlocks: I + B1 locks I -> ok
+41      B1              B1
+42      B1              B1
+43      B1              B1
+44      B1              B1
+45      Z1              Z1                                      B1 unlocks: I + Z1 locks J -> ok
+46      Z1              Z1
+47      Z1              Z1
+48      Z1              Z1
+49      Z1              Z1
+50      Z1              Z1
+51      Z1              Z1
+52      Z1              Z1
+53      Z1              Z1
+54      Z1              Z1
+55      I                                                       Z1 unlocks: J
+56      I
+57      I
+58      I
+59      I
+60      B2              B2                                      B2 locks I -> ok
+61      B2              B2
+62      B2              B2
+63      B2              B2
+64      B2              B2
+65      I                                                       B2 unlocks: I
+66      I
+67      I
+68      I
+69      I
+70      I
+71      I
+72      I
+73      I
+74      I
+75      I
+76      I
+77      I
+78      I
+79      I
+80      I
+81      I
+82      I
+83      I
+84      I
+85      M1              M1                                      M1 locks I -> ok
+86      M1              M1
+87      M1              M1
+88      M1              M1
+89      M1              M1
+90      M1              M1Z2            B3                      B3 locks I -> blocked
+91      M1              M1Z2            B3
+92      M1              M1Z2            B3
+93      M1              M1Z2            B3
+94      M1              M1Z2            B3
+95      M1              M1Z2            B3
+96      M1              M1Z2            B3
+97      M1              M1Z2            B3
+98      M1              M1Z2            B3
+99      M1              M1Z2            B3
+100     M1              M1Z2            B3
+101     M1              M1Z2            B3
+102     M1              M1Z2            B3
+103     M1              M1Z2            B3
+104     M1              M1Z2            B3
+105     M1              M1Z2            B3
+106     M1              M1Z2            B3
+107     M1              M1Z2            B3
+108     M1              M1Z2            B3
+109     M1              M1Z2            B3
+110     Z2              Z2              B3                      M1 unlocks: I + Z2 locks J -> ok
+111     B3              Z2B3                                    [Z2 preempted] + B3 locks I -> ok
+112     B3              Z2B3
+113     B3              Z2B3
+114     B3              Z2B3
+115     B3              Z2B3
+116     Z2              Z2                                      B3 unlocks: I
+117     Z2              Z2
+118     Z2              Z2
+119     Z2              Z2
+120     Z2              Z2B4
+121     Z2              Z2B4
+122     Z2              Z2B4
+123     Z2              Z2B4
+124     Z2              Z2B4
+125     B4              B4                                      Z2 unlocks: J + B4 locks I -> ok
+126     B4              B4
+127     B4              B4
+128     B4              B4
+129     B4              B4
+130     I                                                       B4 unlocks: I
+-----------------------------------------------
+Task: M max. Reaktionszeit: 40
+Task: Z max. Reaktionszeit: 35
+Task: B max. Reaktionszeit: 26
+Killed Jobs:
+
+
+
+
+
+
+__________________________________________________________________________________________________Input-10
+
+
+---------------------------------/simulator -dm -kill -pip ./input-10.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       E0              E0
+1       E0              E0                                      E0 locks Y -> ok
+2       D0              E0D0                                    [E0 preempted]
+3       D0              E0D0                                    D0 locks X -> ok
+4       C0              E0D0C0                                  [D0 preempted]
+5       B0              E0D0C0B0                                [C0 preempted]
+6       C0              E0D0C0          B0                      B0 locks Y -> blocked
+7       A0              E0D0A0          B0
+8       E0              E0D0            B0A0                    A0 locks X -> blocked
+9       E0              E0D0            B0A0
+10      E0              E0D0            B0A0
+11      E0              E0D0            B0A0                    E0 unlocks: Y
+12      D0              D0B0            A0
+13      D0              D0B0            A0                      D0 locks Y -> ok
+14      D0              D0              A0B0                    B0 locks Y -> blocked + D0 unlocks: Y
+15      B0              D0B0            A0                      [D0 preempted] + B0 locks Y -> ok
+16      B0              D0B0            A0                      B0 unlocks: Y
+17      D0              D0              A0                      D0 unlocks: X
+18      A0              A0                                      A0 locks X -> ok
+19      A0              A0                                      A0 unlocks: X
+20
+-----------------------------------------------
+Task: A max. Reaktionszeit: 13
+Task: B max. Reaktionszeit: 12
+Task: C max. Reaktionszeit: 3
+Task: D max. Reaktionszeit: 16
+Task: E max. Reaktionszeit: 12
+Killed Jobs:
+
+
+----------------------------------/simulator -dm -kill ./input-10.txt
+
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       E0              E0
+1       E0              E0                                      E0 locks Y -> ok
+2       D0              E0D0                                    [E0 preempted]
+3       D0              E0D0                                    D0 locks X -> ok
+4       C0              E0D0C0                                  [D0 preempted]
+5       B0              E0D0C0B0                                [C0 preempted]
+6       C0              E0D0C0          B0                      B0 locks Y -> blocked
+7       A0              E0D0A0          B0
+8       D0              E0D0            B0A0                    A0 locks X -> blocked
+9       E0              E0              B0A0D0                  D0 locks Y -> blocked
+10      E0              E0              B0A0D0
+11      E0              E0              B0A0D0
+12      E0              E0              B0A0D0                  E0 unlocks: Y
+13      B0              B0              A0D0                    B0 locks Y -> ok
+14      B0              B0              A0D0                    B0 unlocks: Y
+15      D0              D0              A0                      D0 locks Y -> ok
+16      D0              D0              A0                      D0 unlocks: X + D0 unlocks: Y
+17      A0              D0A0                                    [D0 preempted] + A0 locks X -> ok
+18      A0              D0A0                                    A0 unlocks: X
+19      D0              D0
+20
+-----------------------------------------------
+Task: A max. Reaktionszeit: 12
+Task: B max. Reaktionszeit: 10
+Task: C max. Reaktionszeit: 3
+Task: D max. Reaktionszeit: 18
+Task: E max. Reaktionszeit: 13
+Killed Jobs:
+
+
+
+-------------------------------------/simulator -edf -kill -pip ./input-10.txt
+
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       E0              E0
+1       E0              E0                                      E0 locks Y -> ok
+2       E0              E0D0
+3       E0              E0D0
+4       E0              E0D0C0
+5       E0              E0D0C0B0                                        E0 unlocks: Y
+6       D0              D0C0B0
+7       D0              D0C0B0A0                                        D0 locks X -> ok
+8       D0              D0C0B0A0
+9       D0              D0C0B0A0                                        D0 locks Y -> ok
+10      D0              D0C0B0A0                                        D0 unlocks: Y
+11      D0              D0C0B0A0                                        D0 unlocks: X
+12      C0              C0B0A0
+13      C0              C0B0A0
+14      B0              B0A0
+15      B0              B0A0                                    B0 locks Y -> ok
+16      B0              B0A0                                    B0 unlocks: Y
+17      A0              A0
+18      A0              A0                                      A0 locks X -> ok
+19      A0              A0                                      A0 unlocks: X
+20
+-----------------------------------------------
+Task: A max. Reaktionszeit: 13
+Task: B max. Reaktionszeit: 12
+Task: C max. Reaktionszeit: 10
+Task: D max. Reaktionszeit: 10
+Task: E max. Reaktionszeit: 6
+Killed Jobs:
+
+
+-------------------------------------/simulator -edf -kill ./input-10.txt
+
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       E0              E0
+1       E0              E0                                      E0 locks Y -> ok
+2       E0              E0D0
+3       E0              E0D0
+4       E0              E0D0C0
+5       E0              E0D0C0B0                                        E0 unlocks: Y
+6       D0              D0C0B0
+7       D0              D0C0B0A0                                        D0 locks X -> ok
+8       D0              D0C0B0A0
+9       D0              D0C0B0A0                                        D0 locks Y -> ok
+10      D0              D0C0B0A0                                        D0 unlocks: Y
+11      D0              D0C0B0A0                                        D0 unlocks: X
+12      C0              C0B0A0
+13      C0              C0B0A0
+14      B0              B0A0
+15      B0              B0A0                                    B0 locks Y -> ok
+16      B0              B0A0                                    B0 unlocks: Y
+17      A0              A0
+18      A0              A0                                      A0 locks X -> ok
+19      A0              A0                                      A0 unlocks: X
+20
+-----------------------------------------------
+Task: A max. Reaktionszeit: 13
+Task: B max. Reaktionszeit: 12
+Task: C max. Reaktionszeit: 10
+Task: D max. Reaktionszeit: 10
+Task: E max. Reaktionszeit: 6
+Killed Jobs:
+
+
+
+
+
+
+
+__________________________________________________________________________________________________Input-11
+
+
+
+-----------------------------./simulator -dm -kill -pip ./input-11.txt
+
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       E0              E0                                      E0 locks Y -> ok
+1       D0              E0D0                                    [E0 preempted] + D0 locks X -> ok
+2       D0              E0D0
+3       D0              E0D0
+4       E0              E0              D0                      D0 locks Y -> blocked
+5       E0              E0              D0
+6       I                               D0E0                    E0 locks X -> blocked
+7       I                               D0E0
+8       B0              B0              D0E0                    B0 locks Z -> ok
+9       B0              B0              D0E0
+10      A0              B0A0            D0E0                    [B0 preempted] + A0 locks V -> ok
+11      B0              B0              D0E0A0                  A0 locks Z -> blocked
+12      I                               D0E0A0B0                B0 locks V -> blocked
+13      C0              C0              D0E0A0B0
+14      C0              C0              D0E0A0B0
+15      I                               D0E0A0B0
+16      I                               D0E0A0B0
+17      I                               D0E0A0B0
+18      I                               E0B0                    D0 missed Deadline (aborted) + A0 missed Deadline (aborted)
+19      I                               E0B0
+20                                                          E0 missed Deadline (aborted) + B0 missed Deadline (aborted)
+21
+22
+23      I                                                      locks X -> blocked
+24      I
+25      I
+26      I
+27      I
+28      I
+29      I
+30      I
+31      I
+32      I
+33      C1              C1
+34      C1              C1
+35      I
+36      I
+37      I
+38      I
+39      I
+40      I                                                        missed Deadline (aborted)
+-----------------------------------------------
+Task: A max. Reaktionszeit: 8
+Task: B max. Reaktionszeit: 12
+Task: C max. Reaktionszeit: 2
+Task: D max. Reaktionszeit: 17
+Task: E max. Reaktionszeit: 20
+Killed Jobs: D0(t:18), A0(t:18), E0(t:20), B0(t:20), (t:40)
+
+
+---------------------------------./simulator -dm -kill ./input-11.txt
+
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       E0              E0                                      E0 locks Y -> ok
+1       D0              E0D0                                    [E0 preempted] + D0 locks X -> ok
+2       D0              E0D0
+3       D0              E0D0
+4       E0              E0              D0                      D0 locks Y -> blocked
+5       E0              E0              D0
+6       I                               D0E0                    E0 locks X -> blocked
+7       I                               D0E0
+8       B0              B0              D0E0                    B0 locks Z -> ok
+9       B0              B0              D0E0
+10      A0              B0A0            D0E0                    [B0 preempted] + A0 locks V -> ok
+11      B0              B0              D0E0A0                  A0 locks Z -> blocked
+12      I                               D0E0A0B0                        B0 locks V -> blocked
+13      C0              C0              D0E0A0B0
+14      C0              C0              D0E0A0B0
+15      I                               D0E0A0B0
+16      I                               D0E0A0B0
+17      I                               D0E0A0B0
+18      I                               E0B0                    D0 missed Deadline (aborted) + A0 missed Deadline (aborted)
+19      I                               E0B0
+20      I                                                       E0 missed Deadline (aborted) + B0 missed Deadline (aborted)
+21      I
+22      I
+23      I
+24      I
+25      I
+26      I
+27      I
+28      I
+29      I
+30      I
+31      I
+32      I
+33      C1              C1
+34      C1              C1
+35      I
+36      I
+37      I
+38      I
+39      I
+40      I                                                        missed Deadline (aborted)
+-----------------------------------------------
+Task: A max. Reaktionszeit: 8
+Task: B max. Reaktionszeit: 12
+Task: C max. Reaktionszeit: 2
+Task: D max. Reaktionszeit: 17
+Task: E max. Reaktionszeit: 20
+Killed Jobs: D0(t:18), A0(t:18), E0(t:20), B0(t:20), (t:40)
+
+
+---------------------------------./simulator -edf -kill ./input-11.txt
+
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       E0              E0                                      E0 locks Y -> ok
+1       D0              E0D0                                    [E0 preempted] + D0 locks X -> ok
+2       D0              E0D0
+3       D0              E0D0
+4       E0              E0              D0                      D0 locks Y -> blocked
+5       E0              E0              D0
+6       I                               D0E0                    E0 locks X -> blocked
+7       I                               D0E0
+8       B0              B0              D0E0                    B0 locks Z -> ok
+9       B0              B0              D0E0
+10      A0              B0A0            D0E0                    [B0 preempted] + A0 locks V -> ok
+11      B0              B0              D0E0A0                  A0 locks Z -> blocked
+12      I                               D0E0A0B0                B0 locks V -> blocked
+13      C0              C0              D0E0A0B0
+14      C0              C0              D0E0A0B0
+15      I                               D0E0A0B0
+16      I                               D0E0A0B0
+17      I                               D0E0A0B0
+18      I                               E0B0                    D0 missed Deadline (aborted) + A0 missed Deadline (aborted)
+19      I                               E0B0
+20      I                                                    E0 missed Deadline (aborted) + B0 missed Deadline (aborted)
+21      I
+22      I
+23      I
+24      I
+25      I
+26      I
+27      I
+28      I
+29      I
+30      I
+31      I
+32      I
+33      C1              C1
+34      C1              C1
+35      I
+36      I
+37      I
+38      I
+39      I
+40      I                                                        missed Deadline (aborted)
+-----------------------------------------------
+Task: A max. Reaktionszeit: 8
+Task: B max. Reaktionszeit: 12
+Task: C max. Reaktionszeit: 2
+Task: D max. Reaktionszeit: 17
+Task: E max. Reaktionszeit: 20
+Killed Jobs: D0(t:18), A0(t:18), E0(t:20), B0(t:20), (t:40)
+
+
+--------------------------------------./simulator -edf -kill -pip ./input-11.txt
+
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       E0              E0                                      E0 locks Y -> ok
+1       D0              E0D0                                    [E0 preempted] + D0 locks X -> ok
+2       D0              E0D0
+3       D0              E0D0
+4       E0              E0              D0                      D0 locks Y -> blocked
+5       E0              E0              D0
+6       I                               D0E0                    E0 locks X -> blocked
+7       I                               D0E0
+8       B0              B0              D0E0                    B0 locks Z -> ok
+9       B0              B0              D0E0
+10      A0              B0A0            D0E0                    [B0 preempted] + A0 locks V -> ok
+11      B0              B0              D0E0A0                  A0 locks Z -> blocked
+12      I                               D0E0A0B0                        B0 locks V -> blocked
+13      C0              C0              D0E0A0B0
+14      C0              C0              D0E0A0B0
+15      I                               D0E0A0B0
+16      I                               D0E0A0B0
+17      I                               D0E0A0B0
+18      I                               E0B0                    D0 missed Deadline (aborted) + A0 missed Deadline (aborted)
+19      I                               E0B0
+20      I                                                   E0 missed Deadline (aborted) + B0 missed Deadline (aborted)
+21      I
+22      I
+23      I
+24      I
+25      I
+26      I
+27      I
+28      I
+29      I
+30      I
+31      I
+32      I
+33      C1              C1
+34      C1              C1
+35      I
+36      I
+37      I
+38      I
+39      I
+40      I                                                        missed Deadline (aborted)
+-----------------------------------------------
+Task: A max. Reaktionszeit: 8
+Task: B max. Reaktionszeit: 12
+Task: C max. Reaktionszeit: 2
+Task: D max. Reaktionszeit: 17
+Task: E max. Reaktionszeit: 20
+Killed Jobs: D0(t:18), A0(t:18), E0(t:20), B0(t:20), (t:40)
+
+
+
+
+
+__________________________________________________________________________________________________Input-12
+
+
+--------------------------------./simulator -dm -kill -pip ./input-12.txt
+
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       C0              C0D0                                    C0 locks X -> ok
+1       C0              C0D0
+2       C0              C0D0
+3       C0              C0D0
+4       C0              C0D0
+5       C0              C0D0
+6       C0              C0D0
+7       C0              C0D0
+8       C0              C0D0                                    C0 locks Y -> ok + C0 unlocks: X
+9       C0              C0D0
+10      C0              C0D0
+11      C0              C0D0
+12      A0              C0D0A0                                  [C0 preempted] + A0 locks X -> ok
+13      C0              C0D0            A0                      A0 locks Y -> blocked
+14      C0              C0D0            A0
+15      C0              C0D0            A0
+16      I                               A0D0                    C0 unlocks: Y + D0 locks X -> blocked
+17      A0              A0              D0                      A0 locks Y -> ok + A0 unlocks: X
+18      A0              A0D0
+19      D0              D0                                      A0 unlocks: Y + D0 locks X -> ok
+20      D0              D0
+21      D0              D0
+22      D0              D0
+23      D0              D0
+24      D0              D0
+25      D0              D0                                      D0 locks Y -> ok + D0 unlocks: X
+26      D0              D0
+27      D0              D0
+28      D0              D0
+29      D0              D0
+30      D0              D0                                      D0 locks Z -> ok + D0 unlocks: Y
+31      B0              D0B0                                    [D0 preempted] + B0 locks Y -> ok
+32      B0              D0B0
+33      B0              D0B0
+34      B0              D0B0
+35      B0              D0B0
+36      B0              D0B0
+37      B0              D0B0
+38      B0              D0B0
+39      B0              D0B0
+40      D0              D0              B0                      B0 locks Z -> blocked
+41      D0              D0              B0
+42      A1              D0A1            B0                      [D0 preempted] + A1 locks X -> ok
+43      D0              D0              B0A1                    A1 locks Y -> blocked
+44      I                               B0A1                    D0 unlocks: Z
+45      B0              B0              A1                      B0 locks Z -> ok + B0 unlocks: Y
+46      A1              B0A1                                    [B0 preempted] + A1 locks Y -> ok + A1 unlocks: X
+47      A1              B0A1
+48      B0              B0                                      A1 unlocks: Y
+49      B0              B0
+50      I                                                       B0 unlocks: Z
+51      I
+52      I
+53      I
+54      I
+55      I
+56      I
+57      I
+58      I
+59      I
+60      I
+61      I
+62      I
+63      I
+64      I
+65      I
+66      I
+67      I
+68      I
+69      I
+70      C1              C1                                      C1 locks X -> ok
+71      B1              C1B1                                    [C1 preempted] + B1 locks Y -> ok
+72      C1              C1B1            A2                      [B1 preempted] + A2 locks X -> blocked
+73      C1              C1B1            A2
+74      C1              C1B1            A2
+75      C1              C1B1            A2
+76      C1              C1B1            A2
+77      C1              C1B1            A2
+78      C1              C1B1            A2
+79      B1              B1              A2C1                    C1 locks Y -> blocked
+80      B1              B1              A2C1
+81      B1              B1              A2C1
+82      B1              B1              A2C1
+83      B1              B1              A2C1
+84      B1              B1              A2C1
+85      B1              B1              A2C1
+86      B1              B1              A2C1
+87      B1              B1              A2C1                    B1 locks Z -> ok + B1 unlocks: Y
+88      B1              B1C1            A2
+89      B1              B1C1            A2
+90      C1              C1              A2                      B1 unlocks: Z + C1 locks Y -> ok + C1 unlocks: X
+91      A2              C1A2                                    [C1 preempted] + A2 locks X -> ok
+92      C1              C1              A2                      A2 locks Y -> blocked
+93      C1              C1              A2
+94      C1              C1              A2
+95      C1              C1              A2
+96      C1              C1              A2
+97      C1              C1              A2
+98      I                               A2                      C1 unlocks: Y
+99      A2              A2                                      A2 locks Y -> ok + A2 unlocks: X
+100     A2              A2D1
+-----------------------------------------------
+Task: A max. Reaktionszeit: 27
+Task: B max. Reaktionszeit: 19
+Task: C max. Reaktionszeit: 28
+Task: D max. Reaktionszeit: 44
+Killed Jobs:
+
+
+
+----------------------./simulator -edf -kill -pip ./input-12.txt
+
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       C0              C0D0                                    C0 locks X -> ok
+1       C0              C0D0
+2       C0              C0D0
+3       C0              C0D0
+4       C0              C0D0
+5       C0              C0D0
+6       C0              C0D0
+7       C0              C0D0
+8       C0              C0D0                                    C0 locks Y -> ok + C0 unlocks: X
+9       C0              C0D0
+10      C0              C0D0
+11      C0              C0D0
+12      A0              C0D0A0                                  [C0 preempted] + A0 locks X -> ok
+13      C0              C0D0            A0                      A0 locks Y -> blocked
+14      C0              C0D0            A0
+15      C0              C0D0            A0
+16      I                               A0D0                    C0 unlocks: Y + D0 locks X -> blocked
+17      A0              A0              D0                      A0 locks Y -> ok + A0 unlocks: X
+18      A0              A0D0
+19      D0              D0                                      A0 unlocks: Y + D0 locks X -> ok
+20      D0              D0
+21      D0              D0
+22      D0              D0
+23      D0              D0
+24      D0              D0
+25      D0              D0                                      D0 locks Y -> ok + D0 unlocks: X
+26      D0              D0
+27      D0              D0
+28      D0              D0
+29      D0              D0
+30      D0              D0                                      D0 locks Z -> ok + D0 unlocks: Y
+31      B0              D0B0                                    [D0 preempted] + B0 locks Y -> ok
+32      B0              D0B0
+33      B0              D0B0
+34      B0              D0B0
+35      B0              D0B0
+36      B0              D0B0
+37      B0              D0B0
+38      B0              D0B0
+39      B0              D0B0
+40      D0              D0              B0                      B0 locks Z -> blocked
+41      D0              D0              B0
+42      A1              D0A1            B0                      [D0 preempted] + A1 locks X -> ok
+43      D0              D0              B0A1                    A1 locks Y -> blocked
+44      I                               B0A1                    D0 unlocks: Z
+45      B0              B0              A1                      B0 locks Z -> ok + B0 unlocks: Y
+46      B0              B0A1
+47      B0              B0A1
+48      A1              A1                                      B0 unlocks: Z + A1 locks Y -> ok + A1 unlocks: X
+49      A1              A1
+50      I                                                       A1 unlocks: Y
+51      I
+52      I
+53      I
+54      I
+55      I
+56      I
+57      I
+58      I
+59      I
+60      I
+61      I
+62      I
+63      I
+64      I
+65      I
+66      I
+67      I
+68      I
+69      I
+70      C1              C1                                      C1 locks X -> ok
+71      B1              C1B1                                    [C1 preempted] + B1 locks Y -> ok
+72      B1              C1B1            A2                      A2 locks X -> blocked
+73      B1              C1B1            A2
+74      B1              C1B1            A2
+75      B1              C1B1            A2
+76      B1              C1B1            A2
+77      B1              C1B1            A2
+78      B1              C1B1            A2
+79      B1              C1B1            A2
+80      B1              C1B1            A2                      B1 locks Z -> ok + B1 unlocks: Y
+81      B1              C1B1            A2
+82      B1              C1B1            A2
+83      C1              C1              A2                      B1 unlocks: Z
+84      C1              C1              A2
+85      C1              C1              A2
+86      C1              C1              A2
+87      C1              C1              A2
+88      C1              C1              A2
+89      C1              C1              A2
+90      C1              C1              A2                      C1 locks Y -> ok + C1 unlocks: X
+91      A2              C1A2                                    [C1 preempted] + A2 locks X -> ok
+92      C1              C1              A2                      A2 locks Y -> blocked
+93      C1              C1              A2
+94      C1              C1              A2
+95      C1              C1              A2
+96      C1              C1              A2
+97      C1              C1              A2
+98      I                               A2                      C1 unlocks: Y
+99      A2              A2                                      A2 locks Y -> ok + A2 unlocks: X
+100     A2              A2D1
+-----------------------------------------------
+Task: A max. Reaktionszeit: 27
+Task: B max. Reaktionszeit: 17
+Task: C max. Reaktionszeit: 28
+Task: D max. Reaktionszeit: 44
+Killed Jobs:

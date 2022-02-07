@@ -1,0 +1,7 @@
+Start 0
+Stop 10
+
+Task Phase Period Exectime Deadline
+A      0     4     2        4
+B      0     4     1        4
+C      0     8     2        8

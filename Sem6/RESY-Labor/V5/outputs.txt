@@ -1,0 +1,745 @@
+
+---------------- Vergleich von EDF und DM ohne Ressourcen ohne kill --------------------------------------------
+
+_________________________________________________________________Input-1a.txt
+ ./simulator -dm -nokill ./input-1a.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       A0              A0C0
+1       B0              A0C0B0                                  [A0 preempted]
+2       B0              A0C0B0
+3       A0              A0C0
+4       A1              C0A1
+5       A1              C0A1
+6       B1              C0B1
+7       B1              C0B1
+8       A2              C0A2
+9       A2              C0A2
+10      C0              C0C1                                    C0 missed Deadline
+-----------------------------------------------
+Task: A max. Reaktionszeit: 4
+Task: B max. Reaktionszeit: 2
+Task: C max. Reaktionszeit: 11
+Killed Jobs:
+
+./simulator -edf -nokill ./input-1a.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       A0              A0C0
+1       B0              A0C0B0                                  [A0 preempted]
+2       B0              A0C0B0
+3       A0              A0C0
+4       A1              C0A1
+5       A1              C0A1
+6       B1              C0B1
+7       B1              C0B1
+8       C0              C0A2
+9       A2              A2
+10      A2              A2C1
+-----------------------------------------------
+Task: A max. Reaktionszeit: 4
+Task: B max. Reaktionszeit: 2
+Task: C max. Reaktionszeit: 9
+Killed Jobs:
+
+_________________________________________________________________Input-4a.txt
+/simulator -dm -nokill ./input-4a.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       B0              B0C0
+1       B0              B0C0
+2       A0              B0C0A0                                  [B0 preempted]
+3       A0              B0C0A0
+4       A0              B0C0A0
+5       B0              B0C0
+6       C0              C0
+7       C0              C0
+8       I
+9       I
+10      A1              A1B1
+11      A1              A1B1
+12      A1              A1B1
+13      B1              B1
+14      B1              B1C1
+15      B1              B1C1
+16      C1              C1
+17      C1              C1
+18      A2              A2
+19      A2              A2
+20      A2              A2B2
+21      B2              B2
+22      B2              B2
+23      B2              B2
+24      I
+25      I
+26      A3              A3
+27      A3              A3
+28      A3              A3C2
+29      C2              C2
+30      B3              C2B3                                    [C2 preempted]
+-----------------------------------------------
+Task: A max. Reaktionszeit: 3
+Task: B max. Reaktionszeit: 6
+Task: C max. Reaktionszeit: 8
+Killed Jobs:
+
+
+./simulator -edf -nokill ./input-4a.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       B0              B0C0
+1       B0              B0C0
+2       B0              B0C0A0
+3       A0              C0A0
+4       A0              C0A0
+5       A0              C0A0
+6       C0              C0
+7       C0              C0
+8       I
+9       I
+10      A1              A1B1
+11      A1              A1B1
+12      A1              A1B1
+13      B1              B1
+14      B1              B1C1
+15      B1              B1C1
+16      C1              C1
+17      C1              C1
+18      A2              A2
+19      A2              A2
+20      A2              A2B2
+21      B2              B2
+22      B2              B2
+23      B2              B2
+24      I
+25      I
+26      A3              A3
+27      A3              A3
+28      A3              A3C2
+29      C2              C2
+30      B3              C2B3                                    [C2 preempted]
+-----------------------------------------------
+Task: A max. Reaktionszeit: 4
+Task: B max. Reaktionszeit: 6
+Task: C max. Reaktionszeit: 8
+Killed Jobs:
+
+
+
+_________________________________________________________________Input-Überlast.txt
+./simulator -dm -nokill ./input-ueberlast-beispiel.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       A0              A0B0C0D0
+1       A0              A0B0C0D0
+2       B0              B0C0D0
+3       C0              C0D0
+4       A1              C0D0A1B1                                        [C0 preempted]
+5       A1              C0D0A1B1
+6       B1              C0D0B1
+7       C0              C0D0
+8       A2              D0A2B2C1
+9       A2              D0A2B2C1
+10      B2              D0B2C1D1                                        D0 missed Deadline
+11      C1              C1D1
+12      A3              C1D1A3B3                                        [C1 preempted]
+13      A3              C1D1A3B3
+14      B3              C1D1B3
+15      C1              C1D1
+16      A4              D1A4B4C2
+17      A4              D1A4B4C2
+18      B4              D1B4C2
+19      C2              D1C2
+20      A5              D1C2A5B5D2                                      D1 missed Deadline + [C2 preempted]
+21      A5              C2A5B5D2
+22      B5              C2B5D2
+23      C2              C2D2
+24      A6              D2A6B6C3
+25      A6              D2A6B6C3
+26      B6              D2B6C3
+27      C3              D2C3
+28      A7              D2C3A7B7                                        [C3 preempted]
+29      A7              D2C3A7B7
+30      B7              D2C3B7D3                                        D2 missed Deadline
+31      C3              C3D3
+32      A8              D3A8B8C4
+33      A8              D3A8B8C4
+34      B8              D3B8C4
+35      C4              D3C4
+-----------------------------------------------
+Task: A max. Reaktionszeit: 2
+Task: B max. Reaktionszeit: 3
+Task: C max. Reaktionszeit: 8
+Task: D max. Reaktionszeit: 11
+Killed Jobs:
+
+
+./simulator -edf -nokill ./input-ueberlast-beispiel.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       A0              A0B0C0D0
+1       A0              A0B0C0D0
+2       B0              B0C0D0
+3       C0              C0D0
+4       C0              C0D0A1B1
+5       A1              D0A1B1
+6       A1              D0A1B1
+7       B1              D0B1
+8       D0              D0A2B2C1
+9       A2              A2B2C1
+10      A2              A2B2C1D1
+11      B2              B2C1D1
+12      C1              C1D1A3B3
+13      C1              C1D1A3B3
+14      A3              D1A3B3
+15      A3              D1A3B3
+16      D1              D1B3A4B4C2                                      B3 missed Deadline
+17      A4              A4B4C2
+18      A4              A4B4C2
+19      B4              B4C2
+20      C2              C2A5B5D2
+21      C2              C2A5B5D2
+22      A5              A5B5D2
+23      A5              A5B5D2
+24      A6              B5D2A6B6C3                                      B5 missed Deadline
+25      A6              D2A6B6C3
+26      B6              D2B6C3
+27      D2              D2C3
+28      C3              C3A7B7
+29      C3              C3A7B7
+30      A7              A7B7D3
+31      A7              A7B7D3
+32      A8              B7D3A8B8C4                                      B7 missed Deadline
+33      A8              D3A8B8C4
+34      B8              D3B8C4
+35      D3              D3C4
+-----------------------------------------------
+Task: A max. Reaktionszeit: 4
+Task: B max. Reaktionszeit: 5
+Task: C max. Reaktionszeit: 6
+Task: D max. Reaktionszeit: 9
+Killed Jobs:
+
+
+
+
+
+
+
+
+
+---------------- Vergleich von EDF und DM ohne Ressourcen mit kill --------------------------------------------
+
+_________________________________________________________________Input-1a.txt
+
+./simulator -dm -kill ./input-1a.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       A0              A0C0
+1       B0              A0C0B0                                  [A0 preempted]
+2       B0              A0C0B0
+3       A0              A0C0
+4       A1              C0A1
+5       A1              C0A1
+6       B1              C0B1
+7       B1              C0B1
+8       A2              C0A2
+9       A2              C0A2
+10      C0              C0C1                                    C0 missed Deadline (aborted)
+-----------------------------------------------
+Task: A max. Reaktionszeit: 4
+Task: B max. Reaktionszeit: 2
+Task: C max. Reaktionszeit: 11
+Killed Jobs: C0(t:10), C1(t:10)
+
+
+./simulator -edf -kill ./input-1a.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       A0              A0C0
+1       B0              A0C0B0                                  [A0 preempted]
+2       B0              A0C0B0
+3       A0              A0C0
+4       A1              C0A1
+5       A1              C0A1
+6       B1              C0B1
+7       B1              C0B1
+8       C0              C0A2
+9       A2              A2
+10      A2              A2C1
+-----------------------------------------------
+Task: A max. Reaktionszeit: 4
+Task: B max. Reaktionszeit: 2
+Task: C max. Reaktionszeit: 9
+Killed Jobs:
+
+
+
+
+_________________________________________________________________Input-4a.txt
+
+./simulator -dm -kill ./input-4a.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       B0              B0C0
+1       B0              B0C0
+2       A0              B0C0A0                                  [B0 preempted]
+3       A0              B0C0A0
+4       A0              B0C0A0
+5       B0              B0C0
+6       C0              C0
+7       C0              C0
+8       I
+9       I
+10      A1              A1B1
+11      A1              A1B1
+12      A1              A1B1
+13      B1              B1
+14      B1              B1C1
+15      B1              B1C1
+16      C1              C1
+17      C1              C1
+18      A2              A2
+19      A2              A2
+20      A2              A2B2
+21      B2              B2
+22      B2              B2
+23      B2              B2
+24      I
+25      I
+26      A3              A3
+27      A3              A3
+28      A3              A3C2
+29      C2              C2
+30      B3              C2B3                                    [C2 preempted]
+-----------------------------------------------
+Task: A max. Reaktionszeit: 3
+Task: B max. Reaktionszeit: 6
+Task: C max. Reaktionszeit: 8
+Killed Jobs:
+
+
+
+ ./simulator -edf -kill ./input-4a.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       B0              B0C0
+1       B0              B0C0
+2       B0              B0C0A0
+3       A0              C0A0
+4       A0              C0A0
+5       A0              C0A0
+6       C0              C0
+7       C0              C0
+8       I
+9       I
+10      A1              A1B1
+11      A1              A1B1
+12      A1              A1B1
+13      B1              B1
+14      B1              B1C1
+15      B1              B1C1
+16      C1              C1
+17      C1              C1
+18      A2              A2
+19      A2              A2
+20      A2              A2B2
+21      B2              B2
+22      B2              B2
+23      B2              B2
+24      I
+25      I
+26      A3              A3
+27      A3              A3
+28      A3              A3C2
+29      C2              C2
+30      B3              C2B3                                    [C2 preempted]
+-----------------------------------------------
+Task: A max. Reaktionszeit: 4
+Task: B max. Reaktionszeit: 6
+Task: C max. Reaktionszeit: 8
+Killed Jobs:
+
+
+
+
+
+
+------------------------------------- Vergleich von EDF und DM mit Ressourcen --------------------------------------------
+
+
+_________________________________________________________________Input-7.txt
+./simulator -dm -kill ./input-7.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       I
+1       A0              A0B0
+2       A0              A0B0C0                                  A0 locks Y -> ok + A0 unlocks: Y
+3       B0              B0C0                                    B0 locks X -> ok
+4       B0              B0C0                                    B0 unlocks: X
+5       C0              C0                                      C0 locks Y -> ok
+6       C0              C0                                      C0 locks X -> ok
+7       A1              C0A1                                    [C0 preempted]
+8       C0              C0              A1                      A1 locks Y -> blocked + C0 unlocks: X + C0 unlocks: Y
+9       A1              A1              A1                      A1 locks Y -> ok + A1 unlocks: Y
+10      B1              B1                                      B1 locks X -> ok
+-----------------------------------------------
+Task: A max. Reaktionszeit: 2
+Task: B max. Reaktionszeit: 4
+Task: C max. Reaktionszeit: 8
+Killed Jobs:
+
+
+/simulator -edf -kill ./input-7.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       I
+1       A0              A0B0
+2       A0              A0B0C0                                  A0 locks Y -> ok + A0 unlocks: Y
+3       B0              B0C0                                    B0 locks X -> ok
+4       B0              B0C0                                    B0 unlocks: X
+5       C0              C0                                      C0 locks Y -> ok
+6       C0              C0                                      C0 locks X -> ok
+7       A1              C0A1                                    [C0 preempted]
+8       C0              C0              A1                      A1 locks Y -> blocked + C0 unlocks: X + C0 unlocks: Y
+9       A1              A1              A1                      A1 locks Y -> ok + A1 unlocks: Y
+10      B1              B1                                      B1 locks X -> ok
+-----------------------------------------------
+Task: A max. Reaktionszeit: 2
+Task: B max. Reaktionszeit: 4
+Task: C max. Reaktionszeit: 8
+Killed Jobs:
+
+
+
+_________________________________________________________________Input-8.txt
+./simulator -dm -kill ./input-8.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       C0              C0
+1       C0              C0                                      C0 locks X -> ok
+2       B0              C0B0                                    [C0 preempted]
+3       B0              C0B0
+4       C0              C0              B0                      B0 locks X -> blocked
+5       C0              C0              B0
+6       A0              C0A0            B0                      [C0 preempted]
+7       A0              C0A0            B0
+8       C0              C0              B0A0                    A0 locks X -> blocked
+9       C0              C0              B0A0                    C0 unlocks: X
+10      I                               B0A0
+11      I                               B0A0
+12      I                               B0A0
+13      I                               B0A0
+14      I                               B0A0                    A0 missed Deadline (aborted)
+15      I                               B0
+16      I                               B0
+17      I                               B0                      B0 missed Deadline (aborted)
+18      I
+19      I
+20      C1              C1
+-----------------------------------------------
+Task: A max. Reaktionszeit: 2
+Task: B max. Reaktionszeit: 2
+Task: C max. Reaktionszeit: 10
+Killed Jobs: A0(t:14), B0(t:17)
+
+
+./simulator -edf -kill ./input-8.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       C0              C0
+1       C0              C0                                      C0 locks X -> ok
+2       B0              C0B0                                    [C0 preempted]
+3       B0              C0B0
+4       C0              C0              B0                      B0 locks X -> blocked
+5       C0              C0              B0
+6       A0              C0A0            B0                      [C0 preempted]
+7       A0              C0A0            B0
+8       C0              C0              B0A0                    A0 locks X -> blocked
+9       C0              C0              B0A0                    C0 unlocks: X
+10      I                               B0A0
+11      I                               B0A0
+12      I                               B0A0
+13      I                               B0A0
+14      I                               B0A0                    A0 missed Deadline (aborted)
+15      I                               B0
+16      I                               B0
+17      I                               B0                      B0 missed Deadline (aborted)
+18      I
+19      I
+20      C1              C1
+-----------------------------------------------
+Task: A max. Reaktionszeit: 2
+Task: B max. Reaktionszeit: 2
+Task: C max. Reaktionszeit: 10
+Killed Jobs: A0(t:14), B0(t:17)
+
+
+
+
+
+_________________________________________________________________Input-9.txt
+ ./simulator -dm -kill ./input-9.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       B0              M0Z0B0                                  B0 locks I -> ok
+1       B0              M0Z0B0
+2       B0              M0Z0B0
+3       B0              M0Z0B0
+4       B0              M0Z0B0                                  B0 unlocks: I
+5       Z0              M0Z0                                    Z0 locks J -> ok
+6       Z0              M0Z0
+7       Z0              M0Z0
+8       Z0              M0Z0
+9       Z0              M0Z0
+10      Z0              M0Z0
+11      Z0              M0Z0
+12      Z0              M0Z0
+13      Z0              M0Z0
+14      Z0              M0Z0                                    Z0 unlocks: J
+15      M0              M0
+16      M0              M0
+17      M0              M0
+18      M0              M0
+19      M0              M0
+20      M0              M0
+21      M0              M0
+22      M0              M0
+23      M0              M0
+24      M0              M0
+25      M0              M0
+26      M0              M0
+27      M0              M0
+28      M0              M0
+29      M0              M0
+30      B1              M0B1                                    [M0 preempted]
+31      B1              M0B1
+32      B1              M0B1
+33      B1              M0B1
+34      B1              M0B1
+35      M0              M0
+36      M0              M0
+37      M0              M0
+38      M0              M0
+39      M0              M0
+40      M0              M0                                      M0 missed Deadline (aborted)
+41      I
+42      I
+43      I
+44      I
+45      Z1              Z1
+46      Z1              Z1
+47      Z1              Z1
+48      Z1              Z1
+49      Z1              Z1
+50      Z1              Z1
+51      Z1              Z1
+52      Z1              Z1
+53      Z1              Z1
+54      Z1              Z1
+55      I
+56      I
+57      I
+58      I
+59      I
+60      B2              B2
+61      B2              B2
+62      B2              B2
+63      B2              B2
+64      B2              B2
+65      I
+66      I
+67      I
+68      I
+69      I
+70      I
+71      I
+72      I
+73      I
+74      I
+75      I
+76      I
+77      I
+78      I
+79      I
+80      I
+81      I
+82      I
+83      I
+84      I
+85      I
+86      I
+87      I
+88      I
+89      I
+90      B3              Z2B3
+91      B3              Z2B3
+92      B3              Z2B3
+93      B3              Z2B3
+94      B3              Z2B3
+95      Z2              Z2
+96      Z2              Z2
+97      Z2              Z2
+98      Z2              Z2
+99      Z2              Z2
+100     Z2              Z2
+101     Z2              Z2
+102     Z2              Z2
+103     Z2              Z2
+104     Z2              Z2
+105     I
+106     I
+107     I
+108     I
+109     I
+110     I
+111     I
+112     I
+113     I
+114     I
+115     I
+116     I
+117     I
+118     I
+119     I
+120     B4              B4
+121     B4              B4
+122     B4              B4
+123     B4              B4
+124     B4              B4
+125     I
+126     I
+127     I
+128     I
+129     I
+130     I
+-----------------------------------------------
+Task: M max. Reaktionszeit: 41
+Task: Z max. Reaktionszeit: 15
+Task: B max. Reaktionszeit: 5
+Killed Jobs: M0(t:40)
+
+
+./simulator -edf -kill ./input-9.txt
+Time    Job             Ready-Q         Blocked-Q               Actions
+0       B0              M0Z0B0                                  B0 locks I -> ok
+1       B0              M0Z0B0
+2       B0              M0Z0B0
+3       B0              M0Z0B0
+4       B0              M0Z0B0                                  B0 unlocks: I
+5       Z0              M0Z0                                    Z0 locks J -> ok
+6       Z0              M0Z0
+7       Z0              M0Z0
+8       Z0              M0Z0
+9       Z0              M0Z0
+10      Z0              M0Z0
+11      Z0              M0Z0
+12      Z0              M0Z0
+13      Z0              M0Z0
+14      Z0              M0Z0                                    Z0 unlocks: J
+15      M0              M0
+16      M0              M0
+17      M0              M0
+18      M0              M0
+19      M0              M0
+20      M0              M0
+21      M0              M0
+22      M0              M0
+23      M0              M0
+24      M0              M0
+25      M0              M0
+26      M0              M0
+27      M0              M0
+28      M0              M0
+29      M0              M0
+30      M0              M0B1
+31      M0              M0B1
+32      M0              M0B1
+33      M0              M0B1
+34      M0              M0B1
+35      M0              M0B1
+36      M0              M0B1
+37      M0              M0B1
+38      M0              M0B1
+39      M0              M0B1
+40      B1              B1
+41      B1              B1
+42      B1              B1
+43      B1              B1
+44      B1              B1
+45      Z1              Z1
+46      Z1              Z1
+47      Z1              Z1
+48      Z1              Z1
+49      Z1              Z1
+50      Z1              Z1
+51      Z1              Z1
+52      Z1              Z1
+53      Z1              Z1
+54      Z1              Z1
+55      I
+56      I
+57      I
+58      I
+59      I
+60      B2              B2
+61      B2              B2
+62      B2              B2
+63      B2              B2
+64      B2              B2
+65      I
+66      I
+67      I
+68      I
+69      I
+70      I
+71      I
+72      I
+73      I
+74      I
+75      I
+76      I
+77      I
+78      I
+79      I
+80      I
+81      I
+82      I
+83      I
+84      I
+85      M1              M1
+86      M1              M1
+87      M1              M1
+88      M1              M1
+89      M1              M1
+90      B3              M1Z2B3                                  [M1 preempted]
+91      B3              M1Z2B3
+92      B3              M1Z2B3
+93      B3              M1Z2B3
+94      B3              M1Z2B3
+95      M1              M1Z2
+96      M1              M1Z2
+97      M1              M1Z2
+98      M1              M1Z2
+99      M1              M1Z2
+100     M1              M1Z2
+101     M1              M1Z2
+102     M1              M1Z2
+103     M1              M1Z2
+104     M1              M1Z2
+105     M1              M1Z2
+106     M1              M1Z2
+107     M1              M1Z2
+108     M1              M1Z2
+109     M1              M1Z2
+110     M1              M1Z2
+111     M1              M1Z2
+112     M1              M1Z2
+113     M1              M1Z2
+114     M1              M1Z2
+115     Z2              Z2
+116     Z2              Z2
+117     Z2              Z2
+118     Z2              Z2
+119     Z2              Z2
+120     Z2              Z2B4
+121     Z2              Z2B4
+122     Z2              Z2B4
+123     Z2              Z2B4
+124     Z2              Z2B4
+125     B4              B4
+126     B4              B4
+127     B4              B4
+128     B4              B4
+129     B4              B4
+130     I
+-----------------------------------------------
+Task: M max. Reaktionszeit: 40
+Task: Z max. Reaktionszeit: 35
+Task: B max. Reaktionszeit: 15
+Killed Jobs:

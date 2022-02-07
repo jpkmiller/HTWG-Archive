@@ -1,0 +1,23 @@
+ 
+ -------- Idee1:
+
+ Start 0
+ Stop 30
+
+ Task  Phase  Period Exectime Deadline
+    A      3    8      3       8
+    B      0    10     3       10
+    C      2    8      2       4
+
+
+
+
+--------- Idee2:
+
+ Start 0
+ Stop 30
+
+ Task  Phase  Period Exectime Deadline
+    A      4    8      3       9
+    B      0    10     3       10
+    C      3    8      2       5
