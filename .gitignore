@@ -1,0 +1,10 @@
+# types
+
+*.class
+*.iml
+.DS_Store
+
+# folders
+.idea
+vendor
+build
